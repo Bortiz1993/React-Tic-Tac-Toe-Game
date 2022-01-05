@@ -1,0 +1,52 @@
+import Square from "./Square"
+import React from 'react'
+
+//Board is the Parent Component, Square Component is the child Component.
+
+class Board extends React.Component {
+  // constructor(props) {
+  //     super(props);
+  //     this.state ={
+  //         squares: Array(9).fill(null),
+  //         xIsNext: true,
+  //     };
+  // }
+
+  renderSquare(i) {
+      console.log(this.props.squares[i], i)
+      return ( 
+      <Square 
+      value={this.props.squares[i]}
+      id={i} 
+          onClick={() => this.props.onClick(i)}
+      />
+      );
+  }
+
+  //hardcoded renderSquares
+
+render() {
+  return(
+      <div className="board">
+      <div className='board-row'>
+      {this.renderSquare(0)}
+      {this.renderSquare(1)}
+      {this.renderSquare(2)}
+      </div>
+      <div className="board-row">
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+      </div>
+      <div className="board-row">
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
+      </div>
+      </div>
+  );
+
+}
+}
+
+export default Board;
