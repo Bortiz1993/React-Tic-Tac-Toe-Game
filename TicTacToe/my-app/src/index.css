@@ -85,10 +85,12 @@ ol, ul {
   height: 60vh;
   width: 45vw;
   background: linear-gradient(45deg, black, transparent);
+  padding-bottom: 40px;
 }
 
 .game-board{
   padding: 25px;
+  border-right: 1px solid whitesmoke;
 }
 
 .game-info{
@@ -96,9 +98,17 @@ ol, ul {
 }
 
 .status{
-  color:red;
+  font-family: fantasy;
+  font-size: 20px;
+  color:tan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
 }
 
 .active{
   color:blue;
+
 }

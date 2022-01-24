@@ -1,6 +1,8 @@
 import React from 'react';
 import Board from './Board';
-import calculateWinner from "./calculateWinner"
+import calculateWinner from "./calculateWinner";
+import Button from '@mui/material/Button';
+
 
 
 var history = [
@@ -43,6 +45,15 @@ var history = [
             active: false,
             // winner: calculateWinner(current.stepNumber) 
         };
+    }
+    handleReset = () =>{
+        this.setState({history : [{
+            squares: Array(9).fill(null),
+        }],
+        stepNumber:"",
+        xIsNext: "",
+        active: ""
+    })
     }
     handleClick(i) {
         //Display the location for each move in the format (col, row) in the move history list. somewhere in here I need to create a Matrix, "I" stands for the location of squares and its coordinates EX: 0,1, 0,2, 03.
@@ -141,30 +152,40 @@ var history = [
         return(
             <div className="game">
             <div className="game-board">
+           
                 <Board
+
                     squares={current.squares}
                     onClick={(i) =>
                    { console.log(i)
                        this.handleClick(i)}}
                 />
+                <div className='status'>
+                  {status}
+                 
+                  <div> { this.state.winner?
+
+    ( <Button variant="contained" size="small" color="success" className={this.state.active ? 'active': ''}
+    onClick={ () => {
+    this.setState({active: !this.state.active})
+    // history = history.reverse()
+    this.setState(prevState => { console.log(prevState.history)
+    var copyHistory = [...prevState.history].reverse()
+    console.log(copyHistory)
+    return ({
+    history: copyHistory
+
+})
+})
+}}>Reverse</Button>): ''}
+
+</div>
+ </div>
+
             </div>
+          
             <div className="game-info">
-                <div className='status'>{status} { this.state.winner?
-
-                ( <button className={this.state.active ? 'active': ''}
-            onClick={ () => {
-                this.setState({active: !this.state.active})
-                // history = history.reverse()
-            this.setState(prevState => { console.log(prevState.history)
-            var copyHistory = [...prevState.history].reverse()
-            console.log(copyHistory)
-                return ({
-                    history: copyHistory
-
-                })
-            })
-            }}>Click</button>): ''} 
-                </div>
+              
              <ol>{ this.state.history.map((step, move) => {
             console.log("mapping")
             //use active for an if statement comparison
@@ -178,12 +199,11 @@ var history = [
             return (
                 <li key={move}>
                 {/* ternary statement inside a class */}
-                 <button className={move === this.state.stepNumber ? 'bold-item' : ''} 
+                 <Button variant="contained" size="small" style={{margin: "10px"}} className={move === this.state.stepNumber ? 'bold-item' : ''} 
                  onClick={() =>
-                    this.jumpTo(move)}>{this.state.active? asend:desc}</button>
+                    this.jumpTo(move)}>{this.state.active? asend:desc}</Button>
                    
                 </li>
-        
             );
         })}</ol>
             </div>
