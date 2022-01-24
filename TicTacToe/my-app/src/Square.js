@@ -7,9 +7,10 @@ function Square (props) {
     //         value: null,
     //     };
     // }  
+    // console.log(props)
             return (
-                <button 
-                className='square' id={props.id} onClick={props.onClick}>
+                <button style={{background: props.winner? "rgba(0, 0, 255, 0.5)" : " linear-gradient(45deg,black, transparent)" }}
+                className='square' id={props.id} onClick={props.onClick} disabled={props.disabled}>
                  {props.value}
                 </button>
             );

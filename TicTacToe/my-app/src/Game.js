@@ -52,8 +52,10 @@ var history = [
         }],
         stepNumber:"",
         xIsNext: "",
-        active: ""
+        active: "",
+        winner: undefined
     })
+    console.log("reset?")
     }
     handleClick(i) {
         //Display the location for each move in the format (col, row) in the move history list. somewhere in here I need to create a Matrix, "I" stands for the location of squares and its coordinates EX: 0,1, 0,2, 03.
@@ -92,23 +94,22 @@ var history = [
         let history = this.state.history;
         const current = history[this.state.stepNumber] || this.state.current;
         const winner = calculateWinner(current.squares);
-        console.log(winner)
+        // console.log(winner)
         winner && !this.state.winner? this.setState({
             winner: winner
         }):
-        console.log("not yet?")
+        console.log("")
         current && !this.state.current? this.setState({
             current: current
         }):
-        console.log("not yet?")
+        console.log("")
         history !== this.state.history? this.setState({
             history: history
         }):
-        console.log("not yet?")
+        console.log("")
         console.log(current)
         //maps over history of the game
         const moves = history.map((step, move) => {
-            console.log("mapping")
             const desc = move ?
             'Go to move #' + move :
             'Go to game start';
@@ -124,14 +125,15 @@ var history = [
         
             );
         });
-
+        let title;
+        title = 'Tic-Tac-Toe Game'
         let status;
         if (this.state.winner) {
             status = 'Winner: ' + this.state.winner.winner 
             console.log(this.state.winner)
-            document.getElementById(this.state.winner.tile1).style.background = "rgba(0, 0, 255, 0.5)"
-            document.getElementById(this.state.winner.tile2).style.background = "rgba(0, 0, 255, 0.5)"
-            document.getElementById(this.state.winner.tile3).style.background = "rgba(0, 0, 255, 0.5)"
+            // document.getElementById(this.state.winner.tile1).style.background = "rgba(0, 0, 255, 0.5)"
+            // document.getElementById(this.state.winner.tile2).style.background = "rgba(0, 0, 255, 0.5)"
+            // document.getElementById(this.state.winner.tile3).style.background = "rgba(0, 0, 255, 0.5)"
             
           }
 
@@ -144,17 +146,17 @@ var history = [
                 status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
                 
             }
-
-            
             console.log(this.state.stepNumber)
           }
 
         return(
             <div className="game">
-            <div className="game-board">
-           
+            <div className='title'>
+            {title}
+            </div>
+            <div className="game-board">     
                 <Board
-
+                winner = {this.state.winner}
                     squares={current.squares}
                     onClick={(i) =>
                    { console.log(i)
@@ -181,27 +183,41 @@ var history = [
 
 </div>
  </div>
-
             </div>
           
             <div className="game-info">
               
              <ol>{ this.state.history.map((step, move) => {
-            console.log("mapping")
+            {/* console.log("mapping") */}
             //use active for an if statement comparison
               const asend = !move ?
             'Go to end' :
-            'Go to move #'+  (this.state.history.length - move)  ;
+            'Go to move #'+  (this.state.history.length - (move + 1))  ;
             const desc = move ?
             'Go to move #' + move :
             'Go to game start';
+            console.log(desc)
+            console.log(this.state.active)
         
             return (
                 <li key={move}>
                 {/* ternary statement inside a class */}
-                 <Button variant="contained" size="small" style={{margin: "10px"}} className={move === this.state.stepNumber ? 'bold-item' : ''} 
+                 <Button variant="contained" size="medium" style={{margin: "5px", fontFamily: "fantasy"}} className={move === this.state.stepNumber ? 'bold-item' : ''} 
                  onClick={() =>
-                    this.jumpTo(move)}>{this.state.active? asend:desc}</Button>
+                    {
+                        if(!this.state.active){
+                            if(desc === 'Go to game start'){
+                                this.handleReset()
+                            }
+                            else{
+                            this.jumpTo(move)
+                        }
+                            
+                        }
+                        else{
+                            this.jumpTo(move)
+                        }
+                        }}>{this.state.active? asend:desc}</Button>
                    
                 </li>
             );
@@ -212,6 +228,8 @@ var history = [
         );
     }
 }
+
+//TODO: Ternary statement for Move 0, move 0 should not be there;
 
 export default Game
 

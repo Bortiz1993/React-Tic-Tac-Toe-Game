@@ -13,11 +13,23 @@ class Board extends React.Component {
   // }
 
   renderSquare(i) {
-      console.log(this.props.squares[i], i)
+    // console.log(this.props.winner)
+    //   console.log(this.props.squares[i], i)
       return ( 
       <Square 
+      disabled={this.props.winner? true : false}
       value={this.props.squares[i]}
       id={i} 
+      winner = {this.props.winner?
+      i === this.props.winner.tile1 ?
+      true:
+      i === this.props.winner.tile2 ?
+      true:
+      i === this.props.winner.tile3 ?
+      true
+      :false
+      :false
+      }
           onClick={() => this.props.onClick(i)}
       />
       );
