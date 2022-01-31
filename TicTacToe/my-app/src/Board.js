@@ -1,6 +1,8 @@
 import Square from "./Square"
 import React from 'react'
 
+//ternary statement to mimic AI as a ramdom algorithim? if player x clicks, then player O automatically fills the value.
+
 //Board is the Parent Component, Square Component is the child Component.
 
 class Board extends React.Component {
@@ -16,8 +18,9 @@ class Board extends React.Component {
     // console.log(this.props.winner)
     //   console.log(this.props.squares[i], i)
       return ( 
-      <Square 
-      disabled={this.props.winner? true : false}
+      <Square
+      //ternary statement to disable squares, when you want it disabled when there is a winner and when you want it disabled if there is a value in the square. 
+      disabled={this.props.winner? true : (this.props.squares[i]? true : false)}
       value={this.props.squares[i]}
       id={i} 
       winner = {this.props.winner?

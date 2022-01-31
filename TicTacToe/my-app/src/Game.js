@@ -192,7 +192,8 @@ var history = [
             //use active for an if statement comparison
               const asend = !move ?
             'Go to end' :
-            'Go to move #'+  (this.state.history.length - (move + 1))  ;
+            ((this.state.history.length - (move + 1)) === 0? "Go to game start" :
+            'Go to move #'+  (this.state.history.length - (move + 1)) ) ;
             const desc = move ?
             'Go to move #' + move :
             'Go to game start';
@@ -215,7 +216,12 @@ var history = [
                             
                         }
                         else{
-                            this.jumpTo(move)
+                            if(asend === 'Go to game start'){
+                                this.handleReset()
+                            }
+                            else{
+                                this.jumpTo(move)
+                            }
                         }
                         }}>{this.state.active? asend:desc}</Button>
                    
@@ -229,7 +235,7 @@ var history = [
     }
 }
 
-//TODO: Ternary statement for Move 0, move 0 should not be there;
+
 
 export default Game
 
