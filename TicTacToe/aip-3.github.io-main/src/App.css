@@ -1,0 +1,121 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.inner-container{
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  padding: 70px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.gameboard td:hover {
+  cursor: pointer;
+  background-color: gainsboro;
+}
+
+.gameboard td {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.gameboard tbody {
+  display: flex;
+  flex-direction: column;
+}
+
+.gameboard tr {
+  display: flex;
+}
+
+.player1 {
+  font-size: 120px !important;
+ color: darkslateblue !important;
+}
+
+.player2 {
+  font-size: 100px !important;
+  color: lightseagreen !important;
+}
+
+.player-card {
+  display: flex;
+  align-items: center; 
+  width: 100%;
+  padding: 14px;
+  border-bottom: 1px solid;
+}
+
+.player-card:hover {
+  cursor: pointer;
+  border-bottom: 2px solid;
+}
+
+.active-p1 {
+  border-bottom: 2px solid darkslateblue;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.active-p2 {
+  border-bottom: 2px solid lightseagreen;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.gameboard-row .gameboard-cell.td:hover {
+  cursor: pointer;
+  background-color: gainsboro;
+}
+
+.gameboard-cell {
+  width: 150px;
+  height: 150px;
+  border: 3px solid black;
+}
+
+.winner-modal {
+  position: absolute;
+  background-color: rgba(0,0,0,0.85);
+  width: 100%;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0px;
+  top: 204px;
+  font-size: 30px;
+  color: white;
+}
+
+.upper-left, .upper-middle, .upper-right {
+  border-top: none;
+}
+
+.middle-left, .upper-left, .bottom-left {
+  border-left: none;
+}
+
+.middle-right, .bottom-right, .upper-right {
+  border-right: none;
+}
+
+.bottom-left, .bottom-middle, .bottom-right {
+  border-bottom: none;
+}

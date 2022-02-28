@@ -19,6 +19,7 @@ class Board extends React.Component {
     //   console.log(this.props.squares[i], i)
       return ( 
       <Square
+      //{TODO}
       //ternary statement to disable squares, when you want it disabled when there is a winner and when you want it disabled if there is a value in the square. 
       disabled={this.props.winner? true : (this.props.squares[i]? true : false)}
       value={this.props.squares[i]}
@@ -38,7 +39,7 @@ class Board extends React.Component {
       );
   }
 
-  //hardcoded renderSquares, all avaliable spaces the AI can choose from?
+  //hardcoded renderSquares, all available spaces the AI can choose from?
 
 render() {
   return(

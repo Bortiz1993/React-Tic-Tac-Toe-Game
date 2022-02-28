@@ -131,6 +131,7 @@ var history = [
         
         let title;
         title = 'Tic-Tac-Toe Game'
+        //Terminal state of the game? decides whether the game ends or not?
         let status;
         if (this.state.winner) {
             status = 'Winner: ' + this.state.winner.winner 
