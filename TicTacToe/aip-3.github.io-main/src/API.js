@@ -111,6 +111,7 @@ export const AIMove = (board,totalWins,curPlayer,level) => {
     }) 
 }
 
+//this one? calculates random number.
 const playNovice = (cur_board) => {
     let boardCopy = [...cur_board];
     const open_tiles = getOpenTiles(boardCopy);

@@ -34,6 +34,8 @@ class Board extends React.Component {
       :false
       :false
       }
+  
+    
           onClick={() => this.props.onClick(i)}
       />
       );
