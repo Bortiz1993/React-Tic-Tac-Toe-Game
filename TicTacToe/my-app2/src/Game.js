@@ -2,7 +2,6 @@ import React from 'react';
 import Board from './Board';
 import calculateWinner from "./calculateWinner";
 import Button from '@mui/material/Button';
-import {playNovice} from './RandomMove'
 // import {useAlert} from 'react-alert'
 
 
@@ -65,61 +64,150 @@ var history = [
     })
     }
 
-    // componentDidMount = () => {
-    //     console.log('mounted')
-    // }
+    componentDidMount = () => {
+        console.log('mounted')
+    }
     
-     handleClick(i) {
+    
+    handleClick(i) {
+        // console.log(i, 'js 64')
         //Display the location for each move in the format (col, row) in the move history list. somewhere in here I need to create a Matrix, "I" stands for the location of squares and its coordinates EX: 0,1, 0,2, 03.
         var history = this.state.history.slice(0, this.state.stepNumber + 1);
         var current = history[history.length - 1];
         var squares = current.squares.slice();
+        // if(calculateWinner(squares))
+        // {
+            // console.log("is this the winner")
+        //     return;
+        // }
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         var newHistory = history.concat([
             {
             squares:squares
         }
-        ])
-        const userWinner = calculateWinner(squares);
-        if (userWinner){
-            this.setState({
-                winner: userWinner,   
-                totalWins: {
-                    ...this.state.totalWins,
-                    [userWinner.winner]:this.state.totalWins[userWinner.winner] + 1, 
-                },
-                history: newHistory,
-                stepNumber: newHistory.length - 1,
-                 // xIsNext: !this.state.xIsNext  
-            })
-        } else if(!userWinner){
-            //if there is no winner, once a player clicks, the random AI will pick a random spot on another tile.
-            var history2 = newHistory.slice(0, this.state.stepNumber + 2);
-            var current2 = history2[history2.length - 1];
-            var squares2 = current2.squares.slice();
-            var randomMove = playNovice(squares2)
-            squares2[randomMove] = this.state.xIsNext ? 'O' : 'X';
-            var lastHistory = history2.concat([
-                { squares:squares2}        
-            ])
-            
-            const CPUwinner = calculateWinner(squares);
-            //if the CPU is the winner, we tell it that it won.
-            if (CPUwinner){ 
-                this.setState({
-                    winner: CPUwinner,   
-                    totalWins: {
-                        ...this.state.totalWins,
-                        [CPUwinner.winner]:this.state.totalWins[CPUwinner.winner] + 1, 
-                    },
-                    history: lastHistory,
-                    stepNumber: lastHistory.length - 1,
-                    // xIsNext: !this.state.xIsNext  
-                })
-            }
+    ])
+    const winner = calculateWinner(squares);
+    //  console.log(current)
+    //  console.log(history)
+    winner && !this.state.winner? this.setState({
+        winner: winner,   totalWins: {
+            ...this.state.totalWins,
+            [winner.winner]:this.state.totalWins[winner.winner] + 1, 
+        
         } 
+    }):
+     console.log("")
+
+        //if there is no winner, once a player clicks, the random AI will pick a random spot on another tile.
+    if(!winner){
+        var history2 = newHistory.slice(0, this.state.stepNumber + 2);
+        // console.log(history2, 'js 67')
+        var current2 = history2[history2.length - 1];
+        // console.log(current2)
+        var squares2 = current2.squares.slice();
+        var randomMove = this.playNovice(squares2)
+        console.log(squares2)
+
+        squares2[randomMove] = this.state.xIsNext ? 'O' : 'X';
+        var lastHistory = history2.concat([
+            {
+            squares:squares2
+        }
+
+        
+
+    ])
+
+    
+    console.log(lastHistory)
+    //if there is a winner, we tell it that it won.
+    const winner = calculateWinner(squares);
+    //probably an if statement here? combine ternary statement 
+    winner && !this.state.winner? this.setState({
+        winner: winner,   totalWins: {
+            ...this.state.totalWins,
+            [winner.winner]:this.state.totalWins[winner.winner] + 1, 
+        
+        } 
+    }):
+     console.log("")
+    
+//combine the this.setState above and the one below somehow
+        this.setState({
+        history: lastHistory,
+        stepNumber: lastHistory.length - 1,
+        // xIsNext: !this.state.xIsNext,
+        
+    } )
+    
+    //  console.log(current)
+    //  console.log(history)
+   
+} 
+    //else keep the game going?
+    else{
+        this.setState({
+            history: newHistory,
+            stepNumber: newHistory.length - 1,
+            // xIsNext: !this.state.xIsNext,
+        }) } 
+       }
+
+ //targets a open tile.
+    getOpenTiles = (board) => {
+        let copy = [...board]
+        return copy.reduce((open, tile, index)=>{
+            // console.log(tile, 'number 96')
+           if(tile === null){
+            //    console.log(tile)
+               open.push(index);
+           } 
+           return open;
+        }, [])
     }
-     
+
+//this one? calculates random number.
+     playNovice = (cur_board) => {
+      let boardCopy = [...cur_board];
+      const open_tiles = this.getOpenTiles(boardCopy); 
+      if(open_tiles.length){
+          const rand = Math.random() * open_tiles.length;
+          return open_tiles[Math.floor(rand)];
+      } 
+      return null;
+    }
+
+    //this function is basically the random AI move once a player clicks on the tile.
+      AiMove = () => {
+          console.log('Aimove 130', this.state.xIsNext)
+          var history2 = this.state.history.slice(0, this.state.stepNumber + 1);
+          console.log(history2, 'js 67')
+          var current2 = history2[history2.length - 1];
+          console.log(current2)
+          var squares2 = current2.squares.slice();
+          var randomMove = this.playNovice(squares2)
+          console.log(squares2)
+
+          squares2[randomMove] = this.state.xIsNext ? 'X' : 'O';
+          console.log(squares2, "js 138")
+        this.setState(prevState => {
+            console.log(prevState)
+            
+                        return ({
+                        history: history2.concat([
+                            {
+                            squares:squares2
+                        }
+            
+             ]),
+              stepNumber: history2.length,
+              xIsNext: !this.state.xIsNext,
+                    })       
+           });
+        // let boardCopy = [...board] 
+        // const move = this.playNovice(boardCopy);
+        // boardCopy [move] = xIsNext;
+    }
     jumpTo(step) {
         this.setState({
             stepNumber: step,
@@ -129,31 +217,33 @@ var history = [
 
 //history?
 // {TODO somewhere here is the key to to perserving state for the totalwins}
-     render(){
-    //     let totalWin = this.state.totalWins
-        //let history = this.state.history;
-         const current = this.state.history[this.state.stepNumber] || this.state.current;
-        // const winner = calculateWinner(current.squares);
-        //   console.log(current)
-        //  console.log(history)
-        //  console.log(totalWin)
-        // winner && !this.state.winner? this.setState({
-        //     winner: winner
-        // }):
-        //  console.log("")
-        // current && !this.state.current? this.setState({
-        //     current: current
-        // }):
-        //  console.log("")
-        // history !== this.state.history? this.setState({
-        //     history: history
-        // }):
-        //  console.log("")
+    render(){
+        let totalWin = this.state.totalWins
+        let history = this.state.history;
+        const current = history[this.state.stepNumber] || this.state.current;
+    
+        const winner = calculateWinner(current.squares);
+          console.log(current)
+         console.log(history)
+         console.log(totalWin)
+        winner && !this.state.winner? this.setState({
+            winner: winner
+        }):
+         console.log("")
+        current && !this.state.current? this.setState({
+            current: current
+        }):
+         console.log("")
+        history !== this.state.history? this.setState({
+            history: history
+        }):
+         console.log("")
         //  totalWin && !this.state.totalWins? this.setState({
         //      totalWins: totalWin + 1 
         //  }):
         //  console.log("")
         //  console.log(current)
+
         //maps over history of the game
         const moves = history.map((step, move) => {
             const desc = move ?
@@ -172,7 +262,8 @@ var history = [
             );
         });
 
-        let title = 'Tic-Tac-Toe Game'
+        let title;
+        title = 'Tic-Tac-Toe Game'
         //Terminal state of the game? decides whether the game ends or not?
         let status;
         let points1 = 'Points X: ' + this.state.totalWins['X']
@@ -180,8 +271,7 @@ var history = [
         //Depending on the condition, this if statement will display the winner.
         if (this.state.winner) {
             status = "Winner: " + this.state.winner.winner 
-        //  if (this.state.winner.winner === 'X'){
-        //     status = 'Next player: ' + (this.state.xIsNext ? 'O' : 'X');}
+        //   if (this.state.winner.winner === 'X'){
         //         this.setState({
         //           totalWins: {'X':this.state.totalWins['X'] + 1, 'O': this.state.totalWins['O']} 
         //           })
@@ -257,8 +347,7 @@ var history = [
             <div className="game-info">
               
              <ol>{ this.state.history.map((step, move) => {
-                 ///left of here 3/7/2022 something in the handleclick
-            {/* console.log("mapping") */}
+            console.log("mapping")
             //use active for an if statement comparison
               const asend = !move ?
             'Go to end' :
@@ -267,6 +356,8 @@ var history = [
             const desc = move ?
             'Go to move #' + move :
             'Go to game start';
+            {/* console.log(desc) */}
+            {/* console.log(this.state.active) */}
         
             return (
                 <li key={move}>
