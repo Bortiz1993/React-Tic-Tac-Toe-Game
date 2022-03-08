@@ -1,6 +1,6 @@
 //Terminal state of the game? decides whether the game ends or not?
 function calculateWinner(squares) {
-  console.log(squares)
+  // console.log(squares)
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -13,8 +13,9 @@ function calculateWinner(squares) {
     ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
-      // console.log(a,b,c)
+       console.log(squares[a], squares[b], squares[c])
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+        console.log('Match!')
         return {winner:squares[a], tile1:a, tile2:b, tile3:c};
       }
     }
