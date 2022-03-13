@@ -47,7 +47,7 @@ ol, ul {
   margin-bottom: 10px;
 }
 
-.board{
+#board{
   display: grid;
   grid-template-columns: 250px;
   grid-template-rows: 110px 110px 110px;

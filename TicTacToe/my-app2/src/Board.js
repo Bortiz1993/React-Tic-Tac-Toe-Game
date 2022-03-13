@@ -15,13 +15,14 @@ class Board extends React.Component {
   // }
 
   renderSquare(i) {
-    // console.log(this.props.winner)
-    //   console.log(this.props.squares[i], i)
+     console.log(this.props.draw)
+       console.log(this.props.squares[i], i)
       return ( 
       <Square
       //{TODO}
-      //ternary statement to disable squares, when you want it disabled when there is a winner and when you want it disabled if there is a value in the square. 
+      //ternary statement to disable squares, you want it disabled when there is a winner and when you want it disabled if there is a value in the square. 
       disabled={this.props.winner? true : (this.props.squares[i]? true : false)}
+      draw = {this.props.draw}
       value={this.props.squares[i]}
       id={i} 
       winner = {this.props.winner?
@@ -34,8 +35,6 @@ class Board extends React.Component {
       :false
       :false
       }
-  
-    
           onClick={() => this.props.onClick(i)}
       />
       );
@@ -45,7 +44,7 @@ class Board extends React.Component {
 
 render() {
   return(
-      <div className="board">
+      <div id="board">
       <div className='board-row'>
       {this.renderSquare(0)}
       {this.renderSquare(1)}

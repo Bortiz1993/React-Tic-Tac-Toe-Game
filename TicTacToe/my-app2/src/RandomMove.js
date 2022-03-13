@@ -11,7 +11,7 @@
     }, [])
 }
 
-//this one? calculates random number.
+//this one? calculates random number. playNovice const is being exported to Game with getOpenTiles inside.
  export const playNovice = (cur_board) => {
     let boardCopy = [...cur_board];
     const open_tiles = getOpenTiles(boardCopy); 

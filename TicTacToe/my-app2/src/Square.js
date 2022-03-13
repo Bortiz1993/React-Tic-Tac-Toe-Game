@@ -7,9 +7,13 @@ function Square (props) {
     //         value: null,
     //     };
     // }  
-    // console.log(props)
+    console.log(props)
+    //here is the stylings for the column that wins
             return (
-                <button style={{background: props.winner? "rgba(0, 0, 255, 0.5)" : " linear-gradient(45deg,black, transparent)" }}
+                <button style={{background:
+                 props.winner? "rgba(0, 0, 255, 0.5)" :
+                 props.draw? 'red':
+                  " linear-gradient(45deg,black, transparent)" }}
                 className='square' id={props.id} onClick={props.onClick} disabled={props.disabled}>
                  {props.value}
                 </button>
