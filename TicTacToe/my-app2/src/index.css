@@ -90,6 +90,7 @@ ol, ul {
 }
 
 .game-board{
+  /* background-image: url("./images/DevTom.jpg"); */
   padding: 25px;
   border-right: 1px solid whitesmoke;
 }
@@ -114,4 +115,30 @@ ol, ul {
   align-items: center;
   flex-direction: column;
   padding-top: 30px;
+}
+
+.imgTom{
+  position: absolute;
+  pointer-events: none;
+}
+
+.imgTom img {
+  height: 47vmin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .imgTom {
+    animation: imgTom-slidein  20s linear;
+  }
+}
+
+@keyframes imgTom-slidein {
+  from {
+    margin-left: 100%;
+    width:100%;
+  }
+  to {
+    margin-left: 0%;
+    width:100%;
+  }
 }

@@ -1,11 +1,10 @@
 import React from 'react';
-import Board from './Board';
-import calculateWinner from "./calculateWinner";
+import Board from './components/Game-components/Board';
+import calculateWinner from "./components/Game-components/calculateWinner";
 import Button from '@mui/material/Button';
-import {playNovice} from './RandomMove'
+import {playNovice} from './components/Game-components/RandomMove'
+import ImgWinner from './components/Game-components/ImgWinner';
 // import {useAlert} from 'react-alert'
-
-
 
 var history = [
     // Before first move
@@ -69,14 +68,15 @@ var history = [
             active: false,
             // totalWins: {"X": 0, "O": 0},
             winner: undefined,
-            draw: undefined,
+            draw: false
 
     })
     }
-    //{TODO find out where the if statement goes here if if (this.state.stepNumber >= 9)? 3/12/2022'}  
+    //{TODO find out where the if statement goes here  if (this.state.stepNumber >= 9)? 3/12/2022'}  
     //first handle click.
     handleClick(i) {
     // "I" stands for the location of squares and its coordinates EX: 0,1, 0,2, 03.
+      
         var history = this.state.history.slice(0, this.state.stepNumber + 1);
         var current = history[history.length - 1];
         var squares = current.squares.slice();
@@ -87,7 +87,7 @@ var history = [
         }
     ])
 
-    //if there is a human winner, we tell it that it won.
+    //if there is a human winner, we tell it that it won. adds the +1 to the point system?
     const userWinner = calculateWinner(squares);
      if (userWinner){
         this.setState({
@@ -96,14 +96,28 @@ var history = [
              ...this.state.totalWins,
              [userWinner.winner]:this.state.totalWins[userWinner.winner] + 1, 
          }, 
+        //  draw: true,
          history:newHistory,
-         stepNumber:
-         newHistory.length - 1,
+         stepNumber: newHistory.length - 1, 
      })
        }
     //if there is no winner, once a player clicks, the random AI will pick a random spot on another tile.
     else if(!userWinner){
      var history2 = newHistory.slice(0, this.state.stepNumber + 2);
+     console.log(draw)
+     console.log(history2.length)
+     var draw = history2.length >= 9
+     //last edit 3/13/2022
+     if(draw){
+         this.setState({
+             draw: true
+         })
+     }
+    //  else{
+    //       this.setState({
+    //           draw: true
+    //       })
+    //  }
          var current2 = history2[history2.length - 1];
         var squares2 = current2.squares.slice();
         var randomMove = playNovice(squares2)
@@ -115,11 +129,11 @@ var history = [
         ])
         console.log(squares2)
     
-    //if there is a computer winner, we tell it that it won.
+    //if there is a computer winner, we tell it that it won. Adds the +1 to the CPU point system?
      const CPUwinner = calculateWinner(squares2);
      console.log('winner', CPUwinner)
      if(CPUwinner){ 
-         console.log('won!')
+         console.log('CPUwon!')
          this.setState({
          winner: CPUwinner,
             totalWins: {
@@ -131,6 +145,7 @@ var history = [
              })
      }  else{
         this.setState({
+            // draw: true,
          history:lastHistory,
          stepNumber: lastHistory.length - 1,
                 })
@@ -151,8 +166,8 @@ var history = [
     }
 
 //history?
-// {TODO somewhere here is the key to to perserving state for the totalwins}
     render(){
+       
         // let totalWin = this.state.totalWins
         // let history = this.state.history;
         // const current = this.state.history[this.state.stepNumber] || this.state.current;
@@ -236,13 +251,16 @@ var history = [
             //display status of the next player as long at there is no winner, status will display winner if there is a winner.
             else {
                 status = 'Who is going to win? ';
+           
                 
             }
           }
         return(
-            <div className='points'>
-          
+        
             <div className="game">
+               {this.state.winner? <ImgWinner
+                   
+               />: ''}
             <div className='title'>
             {title}
             </div>
@@ -325,7 +343,7 @@ var history = [
             </div>
 
             </div>
-            </div>
+            
         );
     }
 }
