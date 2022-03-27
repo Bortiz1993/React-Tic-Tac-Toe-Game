@@ -4,6 +4,7 @@ import calculateWinner from "./components/Game-components/calculateWinner";
 import Button from '@mui/material/Button';
 import {playNovice} from './components/Game-components/RandomMove'
 import ImgWinner from './components/Game-components/ImgWinner';
+import ImgWinnerAI from './components/Game-components/ImgWinnerAI'
 // import {useAlert} from 'react-alert'
 
 var history = [
@@ -57,22 +58,48 @@ var history = [
     }
 
     
-    ///this is the last edit we did 3/8/22
     handleReset = () =>{
-        this.setState({
-            history: [{
-                squares: Array(9).fill(null),
-            }],
-            stepNumber: 0,
-            xIsNext: true,
-            active: false,
-            // totalWins: {"X": 0, "O": 0},
-            winner: undefined,
-            draw: false
+        this.setState(function (prevState) {
+            ///ternary statement for the game state, basically once handle reset is clicked, the image will disappier and the points reset. TODO?
+            let totalWinsX = 5
+            let totalWinsO = 3
+            var totalCount = prevState.totalWins['X'] === totalWinsX? 0:
+            prevState.totalWins['X'];
+            var totalCount2 = prevState.totalWins['O'] === totalWinsO? 0:
+            prevState.totalWins['O'];
+            
+           
+            return (
+                {
+                    history: [{
+                        squares: Array(9).fill(null),
+                    }],
+                    stepNumber: 0,
+                    xIsNext: true,
+                    active: false,
+                    // put a ternary statement inside total wins?
+                     totalWins: {"X": totalCount, "O": totalCount2},
+                    winner: undefined,
+                    draw: false
+                }
+            )
+        } )
+    //         {
+        
+    //         history: [{
+    //             squares: Array(9).fill(null),
+    //         }],
+    //         stepNumber: 0,
+           
+    //         xIsNext: true,
+    //         active: false,
+    //         //  totalWins: {"X": 0, "O": 0},
+    //         winner: undefined,
+    //         draw: false
 
-    })
+    // })
     }
-    //{TODO find out where the if statement goes here  if (this.state.stepNumber >= 9)? 3/12/2022'}  
+    //{ find out where the if statement goes here  if (this.state.stepNumber >= 9)? 3/12/2022'}  
     //first handle click.
     handleClick(i) {
     // "I" stands for the location of squares and its coordinates EX: 0,1, 0,2, 03.
@@ -256,11 +283,14 @@ var history = [
             }
           }
         return(
-        
+        // todo
             <div className="game">
-               {this.state.winner? <ImgWinner
+               {this.state.totalWins['X'] === 5? <ImgWinner
                    
-               />: ''}
+               />:
+               this.state.totalWins['O'] === 3? <ImgWinnerAI
+               />:""
+               }
             <div className='title'>
             {title}
             </div>

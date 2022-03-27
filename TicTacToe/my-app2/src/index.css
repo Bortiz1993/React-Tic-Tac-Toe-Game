@@ -117,6 +117,7 @@ ol, ul {
   padding-top: 30px;
 }
 
+/* position: absolute makes it so that this element phases through other elements without moving any current stylings */
 .imgTom{
   position: absolute;
   pointer-events: none;
@@ -124,15 +125,44 @@ ol, ul {
 
 .imgTom img {
   height: 47vmin;
+  width: 38vmin;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .imgTom {
-    animation: imgTom-slidein  20s linear;
+    animation: imgTom-slidein  15s linear;
   }
 }
 
 @keyframes imgTom-slidein {
+  from {
+    margin-left: 100%;
+    width:100%;
+  }
+  to {
+    margin-left: 0%;
+    width:100%;
+  }
+}
+/* <----/> */
+
+.imgAI{
+  position: absolute;
+  pointer-events: none;
+}
+
+.imgAI img {
+  height: 47vmin;
+  width: 38vmin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .imgAI{
+    animation: imgAI-slidein  15s linear;
+  }
+}
+
+@keyframes imgAI-slidein {
   from {
     margin-left: 100%;
     width:100%;
