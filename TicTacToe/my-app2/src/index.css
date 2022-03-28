@@ -7,6 +7,27 @@
   align-items: center;
 }
 
+.link-colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+ background-color: #ffc107;
+ padding: 20px;
+ gap: 50px;
+ position: fixed;
+ top: 0;
+ left: 0;
+ border-radius: 20px;
+
+}
+
+.link-colors a{
+  color:black;
+  font-size: 30px;
+  font-family:fantasy;
+  text-decoration: none;
+}
+
 body {
   background-image:url('./images/blackTickTacToe.jpg');
   font: 14px "Century Gothic", Futura, sans-serif;

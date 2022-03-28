@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
-import Game from './Game'
+import App from './App';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {Provider as AlertProvider} from 'react-alert';
 // import AlertTemplate from 'react-alert-template-basic';
@@ -22,7 +22,10 @@ import Game from './Game'
 // }
 
 
-ReactDOM.render( <Game/>, document.getElementById('root')
+ReactDOM.render(
+<React.StrictMode>  <App/>
+</React.StrictMode>
+, document.getElementById('root')
     );
 
 
