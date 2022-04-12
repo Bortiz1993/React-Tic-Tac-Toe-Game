@@ -1,3 +1,4 @@
+// import { height } from '@mui/system';
 import {BrowserRouter} from 'react-router-dom';
 import Header from './components/container/Header';
  import RoutesB from './components/container/RoutesB';
@@ -6,8 +7,10 @@ import Header from './components/container/Header';
 function App() {
   return (
     <BrowserRouter>
+    <main>
     <Header/>
     <RoutesB/>
+    </main>
 
     </BrowserRouter>
   );
