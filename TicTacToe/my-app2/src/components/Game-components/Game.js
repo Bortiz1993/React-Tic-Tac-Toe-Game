@@ -345,7 +345,7 @@ var history = [
             return (
                 <li key={move}>
                 {/* ternary statement inside a class */}
-                 <Button variant="contained" size="medium" style={{color:"black",  background:"#ffc107", margin: "5px", fontFamily: "fantasy", fontSize:"20px"}} className={move === this.state.stepNumber ? 'bold-item' : ''} 
+                 <Button variant="contained" size="medium" style={{color:"black",  background:"#ffc107", margin: "5px", fontFamily: "fantasy", fontSize:"10px"}} className={move === this.state.stepNumber ? 'bold-item' : ''} 
                  onClick={() =>
                     {
                         if(!this.state.active){
