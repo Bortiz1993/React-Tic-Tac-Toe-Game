@@ -8,7 +8,7 @@ function RoutesB (){
     return(
         <Routes>
         {/* <Route exact path ="/" element={<Portfolio />} */}
-         <Route path="AIGame/*" element={<AIGame/>}/>
+         <Route exact path="/" element={<AIGame/>}/>
          <Route path="*" element={<NoMatch/>}/>
         </Routes>
     
