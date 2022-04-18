@@ -1,6 +1,6 @@
 import { Routes, Route} from "react-router-dom";
 import AIGame from './../pages/AIGame';
-import NoMatch from './../pages/AIGame';
+import NoMatch from './../pages/MainGame';
 
 //Need to figure out why the NoMatch component?
 
