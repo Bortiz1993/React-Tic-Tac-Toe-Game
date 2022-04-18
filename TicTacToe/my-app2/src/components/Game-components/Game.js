@@ -5,7 +5,6 @@ import Button from '@mui/material/Button';
 import {playNovice} from './RandomMove'
 import ImgWinner from './ImgWinner';
 import ImgWinnerAI from './ImgWinnerAI'
-// import {useAlert} from 'react-alert'
 
 var history = [
     // Before first move
@@ -16,35 +15,16 @@ var history = [
         null, null, null,
       ]
     },
-    // After first move
-    // {
-    //   squares: [
-    //     null, null, null,
-    //     null, 'X', null,
-    //     null, null, null,
-    //   ]
-    // },
-    // // After second move
-    // {
-    //   squares: [
-    //     null, null, null,
-    //     null, 'X', null,
-    //     null, null, 'O',
-    //   ]
-    // },
-    // ...
   ]
+
   //state of the game.
-//{ replace all nulls on Array to null?}
+  //{ replace all nulls on Array to null?}
   class Game extends React.Component {
     constructor(props) {
         super(props);
         this.state ={
             history: [{
                 squares:
-                //  ['X', 'X', 'O',
-                        // 'O', 'O', 'X',
-                        // 'X', 'O', null]
                  Array(9).fill(null),
             }],
             stepNumber: 0,
@@ -57,7 +37,6 @@ var history = [
         };
     }
 
-    
     handleReset = () =>{
         this.setState(function (prevState) {
             ///ternary statement for the game state, basically once handle reset is clicked, the image will disappier and the points reset. TODO?
@@ -83,27 +62,12 @@ var history = [
                     draw: false
                 }
             )
-        } )
-    //         {
-        
-    //         history: [{
-    //             squares: Array(9).fill(null),
-    //         }],
-    //         stepNumber: 0,
-           
-    //         xIsNext: true,
-    //         active: false,
-    //         //  totalWins: {"X": 0, "O": 0},
-    //         winner: undefined,
-    //         draw: false
-
-    // })
+        } )   
     }
     //{ find out where the if statement goes here  if (this.state.stepNumber >= 9)? 3/12/2022'}  
     //first handle click.
     handleClick(i) {
     // "I" stands for the location of squares and its coordinates EX: 0,1, 0,2, 03.
-      
         var history = this.state.history.slice(0, this.state.stepNumber + 1);
         var current = history[history.length - 1];
         var squares = current.squares.slice();
@@ -123,7 +87,6 @@ var history = [
              ...this.state.totalWins,
              [userWinner.winner]:this.state.totalWins[userWinner.winner] + 1, 
          }, 
-        //  draw: true,
          history:newHistory,
          stepNumber: newHistory.length - 1, 
      })
@@ -134,17 +97,11 @@ var history = [
      console.log(draw)
      console.log(history2.length)
      var draw = history2.length >= 9
-     //last edit 3/13/2022
      if(draw){
          this.setState({
              draw: true
          })
      }
-    //  else{
-    //       this.setState({
-    //           draw: true
-    //       })
-    //  }
          var current2 = history2[history2.length - 1];
         var squares2 = current2.squares.slice();
         var randomMove = playNovice(squares2)
@@ -162,26 +119,19 @@ var history = [
      if(CPUwinner){ 
          console.log('CPUwon!')
          this.setState({
-         winner: CPUwinner,
-            totalWins: {
+             winner: CPUwinner,
+                 totalWins: {
              ...this.state.totalWins,
              [CPUwinner.winner]:this.state.totalWins[CPUwinner.winner] + 1, 
           }, 
         history:lastHistory,
-       stepNumber: lastHistory.length - 1,
+        stepNumber: lastHistory.length - 1,
              })
      }  else{
         this.setState({
-            // draw: true,
          history:lastHistory,
          stepNumber: lastHistory.length - 1,
                 })
-                 // winner: CPUwinner,
-            //    totalWins: {
-                // ...this.state.totalWins,
-                // [CPUwinner.winner]:this.state.totalWins[CPUwinner.winner] + 1, 
-            //  }, 
-
      }  
     }
 }
@@ -194,29 +144,6 @@ var history = [
 
 //history?
     render(){
-       
-        // let totalWin = this.state.totalWins
-        // let history = this.state.history;
-        // const current = this.state.history[this.state.stepNumber] || this.state.current;
-        // const winner = calculateWinner(current.squares);
-        // winner && !this.state.winner? this.setState({
-        //     winner: winner
-        // }):
-        //  console.log("")
-        // current && !this.state.current? this.setState({
-        //     current: current
-        // }):
-        //  console.log("")
-        // history !== this.state.history? this.setState({
-        //     history: history
-        // }):
-        //  console.log("")
-        //  totalWin && !this.state.totalWins? this.setState({
-        //      totalWins: totalWin + 1 
-        //  }):
-        //  console.log("")
-        //  console.log(current)
-
         //maps over history of the game
         const moves = history.map((step, move) => {
             const desc = move ?
@@ -244,25 +171,6 @@ var history = [
         //Depending on the condition, this if statement will display the winner.
         if (this.state.winner) {
             status = "Winner: " + this.state.winner.winner 
-        //   if (this.state.winner.winner === 'X'){
-        //         this.setState({
-        //           totalWins: {'X':this.state.totalWins['X'] + 1, 'O': this.state.totalWins['O']} 
-        //           })
-            //  points1 = 'Points X: ' +  this.state.totalWins['X'] + 1;
-            
-        //   }
-        //  else if (this.state.winner.winner === 'O'){
-        //     this.setState({
-        //         totalWins: {'O':this.state.totalWins['O'] + 1, 'X': this.state.totalWins['X']} 
-        //         })
-            //    points2 = 'Points O: ' + this.state.totalWins['O'] + 1;
-            // }
-               
-        
-        //    { alert(this.state.winner.winner + 'Good job!')}
-        //    else{
-        //     status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-        //    }
             // document.getElementById(this.state.winner.tile1).style.background = "rgba(0, 0, 255, 0.5)"
             // document.getElementById(this.state.winner.tile2).style.background = "rgba(0, 0, 255, 0.5)"
             // document.getElementById(this.state.winner.tile3).style.background = "rgba(0, 0, 255, 0.5)"
@@ -271,19 +179,15 @@ var history = [
 
             if (this.state.stepNumber >= 9){
                 status = 'Draw'; 
-                // this.setState({draw:true})
-                //  document.getElementById('board').style.background = "rgb(255, 0 , 0)" Hardcoded
             }
 
-            //display status of the next player as long at there is no winner, status will display winner if there is a winner.
+             //display status of the next player as long at there is no winner, status will display winner if there is a winner.
             else {
-                status = 'Who is going to win? ';
-           
-                
+                status = 'Who is going to win? ';     
             }
           }
         return(
-        // todo
+        // If a player wins, you get an image.
             <div className="game">
                {this.state.totalWins['X'] === 5? <ImgWinner
                    
@@ -339,9 +243,7 @@ var history = [
             const desc = move ?
             'Go to move #' + move :
             'Go to game start';
-            {/* console.log(desc) */}
-            {/* console.log(this.state.active) */}
-        
+                   
             return (
                 <li key={move}>
                 {/* ternary statement inside a class */}
@@ -371,9 +273,7 @@ var history = [
             );
         })}</ol>
             </div>
-
             </div>
-            
         );
     }
 }

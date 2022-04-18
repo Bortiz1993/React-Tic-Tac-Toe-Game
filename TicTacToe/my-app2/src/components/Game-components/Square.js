@@ -1,12 +1,7 @@
 //Square is the Child Component of Board Component
 
 function Square (props) {
-    //     constructor(props){
-    //     super(props);
-    //     this.state = {
-    //         value: null,
-    //     };
-    // }  
+
     console.log(props)
     //here is the stylings for the column that wins
             return (

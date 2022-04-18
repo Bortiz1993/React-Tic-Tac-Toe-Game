@@ -6,14 +6,6 @@ import React from 'react'
 //Board is the Parent Component, Square Component is the child Component.
 
 class Board extends React.Component {
-  // constructor(props) {
-  //     super(props);
-  //     this.state ={
-  //         squares: Array(9).fill(null),
-  //         xIsNext: true,
-  //     };
-  // }
-
   renderSquare(i) {
      console.log(this.props.draw)
        console.log(this.props.squares[i], i)

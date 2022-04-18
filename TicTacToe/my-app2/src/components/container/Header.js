@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 
-//Left off here, figured out to use an anchor tag instead as the link.
+// figured out to use an anchor tag instead as the link.
 
 function Header () {
     return (
