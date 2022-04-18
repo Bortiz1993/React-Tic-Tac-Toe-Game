@@ -6,16 +6,16 @@ import {playNovice} from './RandomMove'
 import ImgWinner from './ImgWinner';
 import ImgWinnerAI from './ImgWinnerAI'
 
-var history = [
-    // Before first move
-    {
-      squares: [
-        null, null, null,
-        null, null, null,
-        null, null, null,
-      ]
-    },
-  ]
+// var history = [
+//     // Before first move
+//     {
+//       squares: [
+//         null, null, null,
+//         null, null, null,
+//         null, null, null,
+//       ]
+//     },
+//   ]
 
   //state of the game.
   //{ replace all nulls on Array to null?}
@@ -94,7 +94,7 @@ var history = [
     //if there is no winner, once a player clicks, the random AI will pick a random spot on another tile.
     else if(!userWinner){
      var history2 = newHistory.slice(0, this.state.stepNumber + 2);
-     console.log(draw)
+    //  console.log(draw)
      console.log(history2.length)
      var draw = history2.length >= 9
      if(draw){
@@ -145,22 +145,22 @@ var history = [
 //history?
     render(){
         //maps over history of the game
-        const moves = history.map((step, move) => {
-            const desc = move ?
-            'Go to move #' + move :
-            'Go to game start';
+        // const moves = history.map((step, move) => {
+        //     const desc = move ?
+        //     'Go to move #' + move :
+        //     'Go to game start';
         
-            return (
-                <li key={move}>
-                {/* ternary statement inside a class */}
-                 <button className={move === this.state.stepNumber ? 'bold-item' : ''} 
-                 onClick={() =>
-                    this.jumpTo(move)}>{desc}</button>
+        //     return (
+        //         <li key={move}>
+        //         {/* ternary statement inside a class */}
+        //          <button className={move === this.state.stepNumber ? 'bold-item' : ''} 
+        //          onClick={() =>
+        //             this.jumpTo(move)}>{desc}</button>
                    
-                </li>
+        //         </li>
         
-            );
-        });
+        //     );
+        // });
 
         let title;
         title = 'Tic-Tac-Toe Game'
