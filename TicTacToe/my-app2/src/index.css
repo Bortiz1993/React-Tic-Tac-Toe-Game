@@ -208,7 +208,7 @@ main{
 @media only screen  and (max-width: 720px){
   .title{
     position: absolute;
-    left: 115px;
+    left: 120px;
     top: 150px;
     font-size: 20px;
     font-family: fantasy;
@@ -290,7 +290,7 @@ main{
   .imgTom img{
     margin-left: 0px;
     margin-top: 10px;
-    height: 87vmin;
+    height: 80vmin;
     width: 70vmin;
   }
 
@@ -303,7 +303,7 @@ main{
   .imgAI img{
     margin-left: 0px;
     margin-top: 10px;
-    height: 87vmin;
+    height: 80vmin;
     width: 70vmin;
   }
 
