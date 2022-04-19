@@ -218,7 +218,7 @@ main{
   .game{
     flex-direction: column;
     padding-bottom: 15px;
-    margin-left: 75px;
+    margin-left: 35px;
   }
 
   .game-info{
@@ -269,7 +269,7 @@ main{
     padding-left: 2px;
     align-items: flex-start;
     position: absolute;
-    margin-top: 60px;
+    margin-top: 65px;
     margin-right: 10px;
 
 
