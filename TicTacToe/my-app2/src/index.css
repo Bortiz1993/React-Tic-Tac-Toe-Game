@@ -269,7 +269,7 @@ main{
     padding-left: 2px;
     align-items: flex-start;
     position: absolute;
-    margin-top: 70px;
+    margin-top: 75px;
     margin-right: 10px;
 
 
@@ -281,17 +281,29 @@ main{
     justify-content: space-evenly;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    .imgTom {
+      animation: imgTom-slidein  5s linear;
+    }
+  }
+
   .imgTom img{
     margin-left: 0px;
     margin-top: 10px;
-    height: 92vmin;
+    height: 87vmin;
     width: 70vmin;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .imgAI {
+      animation: imgAI-slidein  5s linear;
+    }
   }
 
   .imgAI img{
     margin-left: 0px;
     margin-top: 10px;
-    height: 92vmin;
+    height: 87vmin;
     width: 70vmin;
   }
 
