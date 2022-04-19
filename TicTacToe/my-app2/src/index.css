@@ -208,8 +208,8 @@ main{
 @media only screen  and (max-width: 720px){
   .title{
     position: absolute;
-    left: 100px;
-    top: 120px;
+    left: 115px;
+    top: 150px;
     font-size: 20px;
     font-family: fantasy;
 
