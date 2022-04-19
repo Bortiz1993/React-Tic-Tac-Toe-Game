@@ -137,6 +137,7 @@ import ImgWinnerAI from './ImgWinnerAI'
         title = 'Tic-Tac-Toe Game'
         //Terminal state of the game? decides whether the game ends or not?
         let status;
+        let status2;
         let points1 = 'Points X: ' + this.state.totalWins['X']
         let points2 = 'Points O: ' + this.state.totalWins['O']
         //Depending on the condition, this if statement will display the winner.
@@ -154,7 +155,8 @@ import ImgWinnerAI from './ImgWinnerAI'
 
              //display status of the next player as long at there is no winner, status will display winner if there is a winner.
             else {
-                status = 'Player X wins at 5 and AI wins at 3 points ';     
+                status = 'Player X wins at 5';
+                status2 = 'Player O wins at 3';     
             }
           }
         return(
