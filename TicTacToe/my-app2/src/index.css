@@ -235,7 +235,7 @@ main{
   .link-colors{
     width: 90%;
     margin-left: 0px;
-    margin-top: 10px;
+    margin-top: 1px;
 
   }
 
@@ -265,7 +265,7 @@ main{
     display:flex;
     /* flex-wrap: nowrap; */
     flex-direction: row;
-    padding-left: 5px;
+    padding-left: 2px;
     align-items: flex-start;
     position: absolute;
     margin-top: 60px;
@@ -334,13 +334,17 @@ main{
 }
 
 .imgTom img {
-  height: 50vmin;
-  width: 40vmin;
+  margin-left: 0px;
+  margin-top: 10px;
+  height: 92vmin;
+  width: 70vmin;
 }
 
 .imgAI img {
-  height: 50vmin;
-  width: 40vmin;
+  margin-left: 0px;
+    margin-top: 10px;
+    height: 92vmin;
+    width: 70vmin;
 }
 }
 

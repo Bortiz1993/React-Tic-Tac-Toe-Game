@@ -6,17 +6,6 @@ import {playNovice} from './RandomMove'
 import ImgWinner from './ImgWinner';
 import ImgWinnerAI from './ImgWinnerAI'
 
-// var history = [
-//     // Before first move
-//     {
-//       squares: [
-//         null, null, null,
-//         null, null, null,
-//         null, null, null,
-//       ]
-//     },
-//   ]
-
   //state of the game.
   //{ replace all nulls on Array to null?}
   class Game extends React.Component {
@@ -36,7 +25,7 @@ import ImgWinnerAI from './ImgWinnerAI'
         
         };
     }
-
+    // reset state
     handleReset = () =>{
         this.setState(function (prevState) {
             ///ternary statement for the game state, basically once handle reset is clicked, the image will disappier and the points reset. TODO?
@@ -144,24 +133,6 @@ import ImgWinnerAI from './ImgWinnerAI'
 
 //history?
     render(){
-        //maps over history of the game
-        // const moves = history.map((step, move) => {
-        //     const desc = move ?
-        //     'Go to move #' + move :
-        //     'Go to game start';
-        
-        //     return (
-        //         <li key={move}>
-        //         {/* ternary statement inside a class */}
-        //          <button className={move === this.state.stepNumber ? 'bold-item' : ''} 
-        //          onClick={() =>
-        //             this.jumpTo(move)}>{desc}</button>
-                   
-        //         </li>
-        
-        //     );
-        // });
-
         let title;
         title = 'Tic-Tac-Toe Game'
         //Terminal state of the game? decides whether the game ends or not?
@@ -183,7 +154,7 @@ import ImgWinnerAI from './ImgWinnerAI'
 
              //display status of the next player as long at there is no winner, status will display winner if there is a winner.
             else {
-                status = 'Who is going to win? ';     
+                status = 'Player X wins at 5 and AI wins at 3 points ';     
             }
           }
         return(
