@@ -182,6 +182,7 @@ import ImgWinnerAI from './ImgWinnerAI'
                 />
                 <div className='status'>
                   {status}<br/>
+                  {status2}<br/>
                   {points1}<br/>
                  {points2}
                  
