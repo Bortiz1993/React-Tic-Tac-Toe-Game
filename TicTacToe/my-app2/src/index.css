@@ -290,8 +290,8 @@ main{
   .imgTom img{
     margin-left: 0px;
     margin-top: 10px;
-    height: 77vmin;
-    width: 65vmin;
+    height: 80vmin;
+    width: 61vmin;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -303,8 +303,8 @@ main{
   .imgAI img{
     margin-left: 0px;
     margin-top: 10px;
-    height: 77vmin;
-    width: 65vmin;
+    height: 80vmin;
+    width: 61vmin;
   }
 
   body{
