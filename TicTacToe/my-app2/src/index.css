@@ -128,10 +128,12 @@ main{
   margin-left: 50px;
 }
 
+
+/* //fix the top of the main page somehow */
 .title{
   position: absolute;
   left:587px;
-  top: 140px;
+  top: 120px;
   font-size: 20px;
   font-family: fantasy;
 }
@@ -160,7 +162,7 @@ main{
 
 @media (prefers-reduced-motion: no-preference) {
   .imgTom {
-    animation: imgTom-slidein  15s linear;
+    animation: imgTom-slidein  5s linear;
   }
 }
 
@@ -188,7 +190,7 @@ main{
 
 @media (prefers-reduced-motion: no-preference) {
   .imgAI{
-    animation: imgAI-slidein  15s linear;
+    animation: imgAI-slidein  5s linear;
   }
 }
 

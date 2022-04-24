@@ -1,9 +1,9 @@
-function NoMatch() {
+function MainGame() {
     return (
     <div>
-    <h1 style={{color:"YellowOrange"}}>Sorry, no match found.</h1>
+    <h1> main game</h1>
     </div>
     )
 }
 
-export default NoMatch;
+export default MainGame;
