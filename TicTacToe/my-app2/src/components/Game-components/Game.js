@@ -22,7 +22,6 @@ import ImgWinnerAI from './ImgWinnerAI'
             totalWins: {"X": 0, "O": 0},
             winner: undefined,
             draw: undefined,
-        
         };
     }
     // reset state
@@ -36,7 +35,6 @@ import ImgWinnerAI from './ImgWinnerAI'
             var totalCount2 = prevState.totalWins['O'] === totalWinsO? 0:
             prevState.totalWins['O'];
             
-           
             return (
                 {
                     history: [{
@@ -82,20 +80,19 @@ import ImgWinnerAI from './ImgWinnerAI'
        }
     //if there is no winner, once a player clicks, the random AI will pick a random spot on another tile.
     else if(!userWinner){
-     var history2 = newHistory.slice(0, this.state.stepNumber + 2);
-    //  console.log(draw)
-     console.log(history2.length)
-     var draw = history2.length >= 9
+         var history2 = newHistory.slice(0, this.state.stepNumber + 2);
+            console.log(history2.length)
+         var draw = history2.length >= 9
      if(draw){
          this.setState({
              draw: true
          })
      }
-         var current2 = history2[history2.length - 1];
-        var squares2 = current2.squares.slice();
-        var randomMove = playNovice(squares2)
-       squares2[randomMove] = this.state.xIsNext ? 'O' : 'X';
-         var lastHistory = history2.concat([
+     var current2 = history2[history2.length - 1];
+     var squares2 = current2.squares.slice();
+     var randomMove = playNovice(squares2)
+     squares2[randomMove] = this.state.xIsNext ? 'O' : 'X';
+     var lastHistory = history2.concat([
         {
            squares:squares2
         }
@@ -104,7 +101,7 @@ import ImgWinnerAI from './ImgWinnerAI'
     
     //if there is a computer winner, we tell it that it won. Adds the +1 to the CPU point system?
      const CPUwinner = calculateWinner(squares2);
-     console.log('winner', CPUwinner)
+        console.log('winner', CPUwinner)
      if(CPUwinner){ 
          console.log('CPUwon!')
          this.setState({
@@ -116,7 +113,7 @@ import ImgWinnerAI from './ImgWinnerAI'
         history:lastHistory,
         stepNumber: lastHistory.length - 1,
              })
-     }  else{
+     }   else{
         this.setState({
          history:lastHistory,
          stepNumber: lastHistory.length - 1,
@@ -148,7 +145,6 @@ import ImgWinnerAI from './ImgWinnerAI'
             // document.getElementById(this.state.winner.tile3).style.background = "rgba(0, 0, 255, 0.5)"
           }
           else {
-
             if (this.state.stepNumber >= 9){
                 status = 'Draw'; 
             }
@@ -190,27 +186,23 @@ import ImgWinnerAI from './ImgWinnerAI'
 
     ( <Button variant="contained" size="small" color="success" className={this.state.active ? 'active': ''}
     onClick={ () => {
-    this.setState({active: !this.state.active})
-     this.setState(prevState => { console.log(prevState.history)
-    var copyHistory = [...prevState.history].reverse()
+        this.setState({active: !this.state.active})
+        this.setState(prevState => { console.log(prevState.history)
+            var copyHistory = [...prevState.history].reverse()
     return ({
-    history: copyHistory
-
+        history: copyHistory
 })
 })
 }}>Reverse</Button>): ''}
-
 </div>
  </div>
-            </div>
-          
-            <div className="game-info">
-              
+    </div>  
+      <div className="game-info"> 
              <ol>{ this.state.history.map((step, move) => {
-            console.log("mapping")
+                 console.log("mapping")
     
             //use active for an if statement comparison
-              const asend = !move ?
+            const asend = !move ?
             'Go to end' :
             ((this.state.history.length - (move + 1)) === 0? "Go to game start" :
             'Go to move #'+  (this.state.history.length - (move + 1)) ) ;
@@ -224,25 +216,23 @@ import ImgWinnerAI from './ImgWinnerAI'
                  <Button variant="contained" size="medium" style={{color:"black",  background:"#ffc107", margin: "5px", fontFamily: "fantasy", fontSize:"12px"}} className={move === this.state.stepNumber ? 'bold-item' : ''} 
                  onClick={() =>
                     {
-                        if(!this.state.active){
-                            if(desc === 'Go to game start'){
+                    if(!this.state.active){
+                        if(desc === 'Go to game start'){
                                 this.handleReset()
                             }
-                            else{
-                            this.jumpTo(move)
-                        }
-                            
-                        }
                         else{
-                            if(asend === 'Go to game start'){
-                                this.handleReset()
+                            this.jumpTo(move)
+                        }              
+                        }
+                  else{
+                     if(asend === 'Go to game start'){
+                        this.handleReset()
                             }
                             else{
                                 this.jumpTo(move)
                             }
                         }
                         }}>{this.state.active? asend:desc}</Button>
-                   
                 </li>
             );
         })}</ol>
@@ -251,7 +241,7 @@ import ImgWinnerAI from './ImgWinnerAI'
         );
     }
 }
-export default Game
+export default Game;
 
 
 

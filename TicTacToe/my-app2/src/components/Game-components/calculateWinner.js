@@ -1,6 +1,5 @@
 //Terminal state of the game? decides whether the game ends or not?
 function calculateWinner(squares) {
-  // console.log(squares)
     const lines = [
       [0, 1, 2],
       [3, 4, 5],

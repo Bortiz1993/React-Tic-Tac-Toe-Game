@@ -5,13 +5,8 @@ function ImgWinnerAI(){
         <div className="imgAI">
             <img  src={AIMeme}  alt="AI"/>
             
-        </div>
-
-
-        
-    );
-
-    
+        </div>        
+    );  
 }
 
 export default ImgWinnerAI;
