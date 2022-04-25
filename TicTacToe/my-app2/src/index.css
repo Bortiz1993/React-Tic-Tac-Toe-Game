@@ -130,12 +130,14 @@ main{
 
 
 /* //fix the top of the main page somehow */
-.title{
-  position: absolute;
-  left:587px;
-  top: 120px;
+#title{
+   /* position: absolute; */
+  /* left:587px; */
+  /* top: 120px;  */
   font-size: 20px;
   font-family: fantasy;
+  margin: auto;
+  
 }
 
 .status{
@@ -158,6 +160,7 @@ main{
 .imgTom img {
   height: 47vmin;
   width: 38vmin;
+  margin-left: 150px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -186,6 +189,7 @@ main{
 .imgAI img {
   height: 47vmin;
   width: 38vmin;
+  margin-left:150px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -207,13 +211,14 @@ main{
 
 /* //Media query for mobile */
 
-@media only screen  and (max-width: 720px){
-  .title{
-    position: absolute;
-    left: 125px;
-    top: 150px;
+@media only screen and (min-width: 320px)  and (max-width: 768px){
+  #title{
+    /* position: absolute;
+    left: 180px;
+    top: 120px; */
     font-size: 20px;
     font-family: fantasy;
+    margin:auto;
 
   }
 
@@ -283,31 +288,54 @@ main{
     justify-content: space-evenly;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
+  /* @media (prefers-reduced-motion: no-preference) {
     .imgTom {
       animation: imgTom-slidein  5s linear;
     }
-  }
+  } */
 
   .imgTom img{
     margin-left: 0px;
-    margin-top: 10px;
-    height: 80vmin;
-    width: 61vmin;
+    margin-top: 30px;
+    height: 90vmin;
+    width: 70vmin;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
+  /* @keyframes imgTom-slidein {
+    from {
+      margin-left: 200%;
+      width:100%;
+    }
+    to {
+      margin-left: 0%;
+      width:100%;
+    }
+  } */
+
+  /* @media (prefers-reduced-motion: no-preference) {
     .imgAI {
       animation: imgAI-slidein  5s linear;
     }
-  }
+  } */
 
   .imgAI img{
     margin-left: 0px;
-    margin-top: 10px;
-    height: 80vmin;
-    width: 61vmin;
+    margin-top: 30px;
+    height: 90vmin;
+    width: 70vmin;
   }
+
+  
+  /* @keyframes imgAI-slidein {
+    from {
+      margin-left: 100%;
+      width:100%;
+    }
+    to {
+      margin-left: 0%;
+      width:100%;
+    }
+  } */
 
   body{
     height: auto;
@@ -334,38 +362,81 @@ main{
 }
 
 /* for tablet */
-@media only screen and (min-width: 721px) and (max-width: 1024px){
+@media only screen and (min-width: 768px) and (max-width: 1024px){
 .game{
-  padding-bottom: 170px;
+  margin:auto;
+  flex-direction: column;
+  padding-bottom: 15px;
 }
 
-.title{
-  left:320px;
-  top:170px;
+.game-board{
+  border:none;
+  margin:auto;
+  padding: 5px;
+  margin-bottom: 100px;
+  margin-left: 0px;
 }
 
+#board{
+  grid-template-columns: 300px;
+  grid-template-rows: 125px 125px 125px;
+}
+
+.status{
+  font-size: 25px;
+  /* display: flex; */
+  /* flex-direction: none; */
+  padding-top: 15px;
+  align-items: flex-start;
+}
+#title{
+  /* left:320px;
+  top:170px; */
+  margin: auto;
+  font-size: 25px;
+  padding: 10px;
+}
+
+
+.game-info{
+  margin:auto;
+  padding: 5px;
+  align-items: flex-end;
+  justify-content: center;
+}
 .link-colors{
-  margin-left: 60px;
+  margin:auto;
+}
+
+ol, ul{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin:auto;
 }
 
 .imgTom img {
   height: 50vmin;
   width: 40vmin;
+  margin-top:50px;
 }
 
 .imgAI img {
   height: 50vmin;
   width: 40vmin;
+  margin-top:50px;
 }
 }
 
 /* laptop */
 
-@media only screen and (min-width: 1025px) and (max-width: 1440px){
-  .title{
-    left:340px;
-    top: 140px;
-    font-size: 50px;
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+  #title{
+    /* left:340px;
+    top: 140px; */
+    font-size: 30px;
+    margin: auto;
   }
 
   .status{
@@ -373,18 +444,23 @@ main{
   }
 
   .link-colors{
-    margin-top: 120px;
+    margin:auto;
   }
 
   .game{
-    padding-bottom: 300px;
+    padding-bottom: 40px;
+    margin: auto;
   }
 
   #board{
-    grid-template-columns: 350px;
+    grid-template-columns: 400px;
     grid-template-rows: 150px 150px 150px;
   }
 
+}
+
+#second-button{
+  font-size: 25px;
 }
 
 html, body, #root, main{
