@@ -164,7 +164,7 @@ import ImgWinnerAI from './ImgWinnerAI'
                this.state.totalWins['O'] === 3? <ImgWinnerAI
                />:""
                }
-            <h5 id="title">
+            <h5 className="title">
             {title}
             </h5>
             <div className="game-board">     
