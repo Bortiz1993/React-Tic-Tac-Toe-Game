@@ -306,7 +306,8 @@ main{
   main{
     height: auto;
     width: auto;
-    padding: 0px;
+    padding: 0;
+    padding-top: 5vh;
   }
 
   html{
