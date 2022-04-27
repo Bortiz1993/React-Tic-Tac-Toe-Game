@@ -381,6 +381,11 @@ ol, ul{
   width: 40vmin;
   margin-top:50px;
 }
+
+main{
+padding: 0px;
+padding-top: 10vh;
+}
 }
 
 /* laptop */
