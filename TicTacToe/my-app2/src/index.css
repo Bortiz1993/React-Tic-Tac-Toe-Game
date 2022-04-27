@@ -412,7 +412,7 @@ ol, ul{
 
 html, body, #root, main{
 width: 100vw;
-height: 100vh;
+min-height: 100vh;
 padding: 0px;
 margin:0;
 }
