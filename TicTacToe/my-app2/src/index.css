@@ -14,11 +14,9 @@
  background-color: #ffc107;
  padding: 10px;
  gap: 50px;
- /* position: fixed; */
- top: 0;
- left: 0;
  border-radius: 20px;
  width: 33%;
+ /* margin-top: 10px; */
 
 }
 
@@ -269,7 +267,7 @@ main{
     flex-direction: row;
     padding-left: 2px;
     align-items: flex-start;
-    position: absolute;
+    /* position: absolute; as a reminder */
     margin-top: 75px;
     margin-right: 30px;
 
@@ -360,6 +358,7 @@ main{
 }
 .link-colors{
   margin:auto;
+  /* margin-top: 20px; */
 }
 
 ol, ul{
