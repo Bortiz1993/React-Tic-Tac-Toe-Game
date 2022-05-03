@@ -1,12 +1,12 @@
 
-
+/* 
 #root {
   height:100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
+} */
+/* 
 .link-colors {
   display: flex;
   flex-direction: row;
@@ -18,16 +18,16 @@
  width: 33%;
  /* margin-top: 10px; */
 
-}
+/* } */
 
-.link-colors a{
+/* .link-colors a{
   color:black;
   font-size: 30px;
   font-family:fantasy;
   text-decoration: none;
-}
+} */ 
 
-body {
+/* body {
   background-image:url('./images/blackTickTacToe.jpg');
   font: 14px "Century Gothic", Futura, sans-serif;
   background-position: center;
@@ -36,8 +36,8 @@ body {
   height: 100vh;
   margin:0;
   padding:0;
-  color:rgb(255, 250, 250);
-}
+  color:rgb(255, 250, 250); 
+}*/
 
 ol, ul {
   padding-left: 30px;
@@ -51,31 +51,31 @@ ol, ul {
   background-color:aqua;
  
 }
-
+/* 
 .board-row{
   display: flex;
 
-}
-
+} */
+/* 
 .board-row:after{
   clear: both;
   content: "";
   display: table;
-}
+} */
 
-.status {
+/* .status {
   margin-bottom: 10px;
-}
+} */
 
-#board{
+/* #board{
   display: grid;
   grid-template-columns: 250px;
   grid-template-rows: 110px 110px 110px;
   box-shadow:snow;
  
   
-}
-
+} */
+/* 
 .square {
   background: linear-gradient(45deg,black, transparent);
   border: 2px solid #dad6d6;
@@ -90,17 +90,17 @@ ol, ul {
   text-align: center;
   width: 100%;
   color:snow;
-}
+} */
 
-.square:focus {
+/* .square:focus {
   outline:none;
-}
+} */
 
-.kbd-navigation .square:focus {
+/* .kbd-navigation .square:focus {
   background: #f3f0f0ef;
-}
+} */
 
-main{
+/* main{
   height: 100vh;
   width: 100vw;
   background: linear-gradient(45deg, black, transparent);
@@ -108,32 +108,32 @@ main{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-}
+} */
 
-.game {
+/* .game {
   display: flex;
   flex-direction: row;
   /* padding-bottom: 40px; */
-}
+/* } */
 
-.game-board{
+/* .game-board{
   /* background-image: url("./images/DevTom.jpg"); */
-  padding: 25px;
-  border-right: 1px solid whitesmoke;
-}
+  /* padding: 25px; */
+  /* border-right: 1px solid whitesmoke; */
+/* }  */
 
-.game-info{
+/* .game-info{
   margin-left: 50px;
-}
+} */
 
 
 /* //fix the top of the main page somehow */
-.title{
+/* .title{
   font-size: 20px;
   font-family: fantasy;
   margin: auto;
   
-}
+} */
 
 .status{
   font-family: fantasy;
@@ -147,18 +147,18 @@ main{
 }
 
 /* position: absolute makes it so that this element phases through other elements without moving any current stylings */
-.imgTom{
+/* .imgTom{
   position: absolute;
   pointer-events: none;
-}
+} */
 
-.imgTom img {
-  height: 47vmin;
-  width: 38vmin;
-  margin-left: 150px;
-}
+/* .imgTom img {
+  height: 10px;
+  width: 10px;
+  /* margin-left: 150px; */
+/* } */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .imgTom {
     animation: imgTom-slidein  5s linear;
   }
@@ -173,21 +173,21 @@ main{
     margin-left: 0%;
     width:100%;
   }
-}
+} */
 /* <----/> */
 
-.imgAI{
+/* .imgAI{
   position: absolute;
   pointer-events: none;
 }
 
 .imgAI img {
-  height: 47vmin;
-  width: 38vmin;
-  margin-left:150px;
-}
+  height: 10px;
+  width: 10px;
+  /* margin-left:150px; */
+/* }  */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .imgAI{
     animation: imgAI-slidein  5s linear;
   }
@@ -202,25 +202,25 @@ main{
     margin-left: 0%;
     width:100%;
   }
-}
+} */
 
 /* //Media query for mobile */
 
 @media only screen and (min-width: 320px)  and (max-width: 768px){
-  .title{
+  /* .title{
     font-size: 20px;
     font-family: fantasy;
     margin:auto;
 
-  }
+  } */
 
-  .game{
-    flex-direction: column;
+  /* .game{ */
+    /* flex-direction: column;
     padding-bottom: 15px;
-    margin-left: 25px;
-  }
+    margin-left: 25px; */
+  /* } */
 
-  .game-info{
+  /* .game-info{
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -230,26 +230,26 @@ main{
     margin: 0px;
     padding: 5px;
     max-width: 80vw;
-  }
+  } */
 
-  .link-colors{
+  /* .link-colors{
     width: 90%;
     margin-left: 0px;
     margin-top: 10px;
 
-  }
+  } */
 
-  #board{
+  /* #board{
     margin-left:1px;
-  }
+  } */
 
-  .game-board{
+  /* .game-board{
     border:none;
     margin-top: 10px;
     padding:0px;
     margin-bottom: 0px;
     margin-right: 15px;
-  }
+  } */
 
   .status{
     font-size:20px;
@@ -263,11 +263,11 @@ main{
 
   ol{
     display:flex;
-    /* flex-wrap: nowrap; */
+  
     flex-direction: row;
     padding-left: 2px;
     align-items: flex-start;
-    /* position: absolute; as a reminder */
+
     margin-top: 0px;
     margin-right: 0px;
 
@@ -283,83 +283,82 @@ main{
 
 
   .imgTom img{
-    margin-left: 0px;
-    margin-top: 30px;
-    height: 90vmin;
-    width: 70vmin;
+    /* margin-left: 0px; */
+    /* margin-top: 30px; */
+    height: 10px;
+    width: 10px;
   }
 
   .imgAI img{
-    margin-left: 0px;
-    margin-top: 30px;
-    height: 90vmin;
-    width: 70vmin;
+    /* margin-left: 0px; */
+    /* margin-top: 30px; */
+    height: 10px;
+    width: 10px;
   }
 
 
-  body{
+  /* body{
     height: auto;
     width: auto;
     margin-top: 20px;
-  }
+  } */
 
-  main{
+  /* main{
     height: auto;
     width: auto;
     padding: 0;
     padding-top: 5vh;
-  }
+  } */
 
-  html{
+  /* html{
     background: black;
-    /* height: 115vh; */
-  }
+  } */
 }
 
 /* for tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px){
-.game{
+/* .game{
   margin:auto;
   flex-direction: column;
   padding-bottom: 15px;
-}
+} */
 
-.game-board{
+/* .game-board{
   border:none;
   margin:auto;
   padding: 5px;
 
-}
+} */
 
-#board{
+/* #board{
   grid-template-columns: 300px;
   grid-template-rows: 125px 125px 125px;
-}
+} */
 
-.status{
+/* .status{
   font-size: 25px;
   /* display: flex; */
   /* flex-direction: none; */
-  padding-top: 15px;
-  align-items: flex-start;
-}
-.title{
-  margin: auto;
-  font-size: 25px;
-  padding: 10px;
-}
+  /* padding-top: 15px;
+  align-items: flex-start; */
+/* } */
+/* .title{
+  /* margin: auto; */
+  /* font-size: 25px; */
+  /* padding: 10px; */
+/* }  */
 
 
-.game-info{
+/* .game-info{
   margin:auto;
   padding: 5px;
   align-items: flex-end;
   justify-content: center;
-}
-.link-colors{
+} */
+/* .link-colors{
   margin:auto;
   /* margin-top: 20px; */
-}
+/* } */
 
 ol, ul{
   display:flex;
@@ -370,54 +369,56 @@ ol, ul{
 }
 
 .imgTom img {
-  height: 50vmin;
-  width: 40vmin;
-  margin-top:50px;
+  height: 10vmin;
+  width: 10vmin;
+  /* margin-top:50px; */
 }
 
 .imgAI img {
-  height: 50vmin;
-  width: 40vmin;
-  margin-top:50px;
+  height: 10vmin;
+  width: 10vmin;
+  /* margin-top:50px; */
 }
 
-main{
+/* main{
 padding: 0px;
 padding-top: 10vh;
-}
+} */
 }
 /* ///figure out the main padding problem */
 /* laptop */
 
 @media only screen and (min-width: 1024px) and (max-width: 1440px){
-  .title{
+  /* .title{
     font-size: 30px;
     margin: auto;
-  }
+  } */
 
-  .status{
+  /* .status{
     font-size: 30px;
-  }
+  } */
 
-  .link-colors{
+  /* .link-colors{
     margin:auto;
-  }
-
+  } */
+/* 
   .game{
     padding-bottom: 40px;
     margin: auto;
-  }
+  } */
 
-  #board{
+  /* #board{
     grid-template-columns: 400px;
     grid-template-rows: 150px 150px 150px;
-  }
+  } */
 
 }
 
 html, body, #root, main{
 width: 100vw;
 min-height: 100vh;
+height:auto;
+overflow: scroll;
 padding: 0px;
 margin:0;
 }

@@ -1,0 +1,75 @@
+.game {
+    /* display: flex;
+    flex-direction: row; */
+    /* padding-bottom: 40px; */
+    /* padding-bottom: 40px;
+    margin: auto; */
+
+/* for mobile */
+    /* flex-direction: column; */
+    /* padding-bottom: 15px; */
+    /* margin-left: 25px; */
+
+/* for tablet */
+    /* margin:auto; */
+    /* flex-direction: column; */
+    /* padding-bottom: 15px; */
+  }
+
+  .title{
+    font-size: 20px;
+    font-family: fantasy;
+    margin: auto;
+    /* it can work for mobile too */
+    /* For Tablet, padding: 10px */
+    /* For laptop font-size: 30px */
+  }
+
+  .game-info{
+    /* overflow: scroll; */
+    /* max-height: 15vh; */
+    /* margin-left: 50px; */
+    /* display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-end;
+    flex-wrap: nowrap; */
+    /* margin: 0px; */
+    /* padding: 5px; */
+    /* max-width: 80vw; */
+
+/* for tablet */
+    /* margin:auto; */
+    /* padding: 5px; */
+    /* align-items: flex-end; */
+    /* justify-content: center; */
+  }
+
+  /* .game-board{ */
+    /* padding: 25px; */
+    /* border-right: 1px solid whitesmoke; */
+
+/* for mobile */
+    /* border:none;
+    margin-top: 10px;
+    padding:0px;
+    margin-bottom: 0px;
+    margin-right: 15px; */
+
+/* for tablet */
+    /* border:none;
+    margin:auto;
+    padding: 5px; */
+  /* } */
+
+  .status{
+    font-size: 25px;
+    /* display: flex; */
+    /* flex-direction: none; */
+    /* padding-top: 15px; */
+    /* align-items: flex-start; */
+
+    /* for mobile: font-size: 30px */
+    /* for tablet: margin-bottom: 10px */
+  }

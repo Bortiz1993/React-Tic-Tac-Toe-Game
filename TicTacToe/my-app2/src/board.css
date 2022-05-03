@@ -1,0 +1,113 @@
+.game-board{
+    /* padding: 25px; */
+    border-right: 1px solid whitesmoke;
+}
+
+#board{
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: 110px 110px 110px;
+    box-shadow:snow;
+   
+    /* for mobile */
+        /*  margin-left:1px;*/
+    /* for tablet */
+        /* grid-template-columns: 300px; */
+        /* grid-template-rows: 125px 125px 125px; */
+    /* for laptop */
+     /* grid-template-columns: 400px;
+     grid-template-rows: 150px 150px 150px; */
+  }
+
+  .board-row{
+    display: flex;
+  
+  }
+
+  .board-row:after{
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  .square {
+    background: linear-gradient(45deg,black, transparent);
+    border: 2px solid #dad6d6;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 100%;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    color:snow;
+  }
+
+  .square:focus {
+    outline:none;
+  }
+
+  .kbd-navigation .square:focus {
+    background: #f3f0f0ef;
+  }
+
+
+/* images section, position: absolute makes it so that this element phases through other elements without moving any current stylings */
+  .imgTom{
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .imgTom img {
+    height: 10px;
+    width: 10px;
+    /* margin-left: 150px; */
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .imgTom {
+      animation: imgTom-slidein  5s linear;
+    }
+  }
+  
+  @keyframes imgTom-slidein {
+    from {
+      margin-left: 100%;
+      width:100%;
+    }
+    to {
+      margin-left: 0%;
+      width:100%;
+    }
+  }
+  /* <---/> */
+  .imgAI{
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .imgAI img {
+    height: 10px;
+    width: 10px;
+    /* margin-left:150px; */
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .imgAI{
+      animation: imgAI-slidein  5s linear;
+    }
+  }
+  
+  @keyframes imgAI-slidein {
+    from {
+      margin-left: 100%;
+      width:100%;
+    }
+    to {
+      margin-left: 0%;
+      width:100%;
+    }
+  }
