@@ -1,6 +1,8 @@
 .game-board{
     /* padding: 25px; */
-    border-right: 1px solid whitesmoke;
+    /* border-right: 1px solid whitesmoke; */
+    grid-row: 2;
+    grid-column: 1;
 }
 
 #board{
@@ -59,11 +61,12 @@
   .imgTom{
     position: absolute;
     pointer-events: none;
+    margin-top: 55px;
   }
   
   .imgTom img {
-    height: 10px;
-    width: 10px;
+    height: 350px;
+    width: 250px;
     /* margin-left: 150px; */
   }
 
@@ -87,11 +90,12 @@
   .imgAI{
     position: absolute;
     pointer-events: none;
+    margin-top: 55px
   }
   
   .imgAI img {
-    height: 10px;
-    width: 10px;
+    height:350px;
+    width: 250px;
     /* margin-left:150px; */
   }
 

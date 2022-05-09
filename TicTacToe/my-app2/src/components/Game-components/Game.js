@@ -1,10 +1,11 @@
 import React from "react";
 import Board from "./Board";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import ImgWinner from "./ImgWinner";
 import ImgWinnerAI from "./ImgWinnerAI";
 import handleClick from "./handleClick";
 import Status from "./Status"
+import GameInfo from './GameInfo'
 
 // how many points each player wins
 const totalWinsX = 5;
@@ -42,24 +43,14 @@ class Game extends React.Component {
         prevState.totalWins["O"] === totalWinsO ? 0 : prevState.totalWins["O"];
 
       return {
-        // history: [
-        //   {
-        //     squares: Array(9).fill(null),
-        //   },
-        // ],
-        // stepNumber: 0,
-        // xIsNext: true,
-        // active: false,
         ...initState,
         // put a ternary statement inside total wins?
         totalWins: { X: totalCount, O: totalCount2 },
-        // winner: undefined,
-        // draw: false,
       };
     });
   };
 
-  jumpTo(step) {
+  jumpTo = (step) => {
     this.setState({
       stepNumber: step,
       xIsNext: step % 2 === 0,
@@ -101,60 +92,11 @@ class Game extends React.Component {
           />
         
         </div>
-        {/* to access a function from a class component */}
+        {/* to send a function from a class component into a child component */}
         <Status reverse={this.reverse} winner={this.state.winner} stepNumber={this.state.stepNumber} totalWins={this.state.totalWins} active={this.state.active}/>
-        <div className="game-info">
-          <ol>
-            {this.state.history.map((step, move) => {
-              console.log("mapping");
-
-              //use active for an if statement comparison
-              const asend = !move
-                ? "Go to end"
-                : this.state.history.length - (move + 1) === 0
-                ? "Go to game start"
-                : "Go to move #" + (this.state.history.length - (move + 1));
-              const desc = move ? "Go to move #" + move : "Go to game start";
-
-              return (
-                <li key={move}>
-                  {/* ternary statement inside a class */}
-                  <Button
-                    variant="contained"
-                    size="medium"
-                    style={{
-                      color: "black",
-                      background: "#ffc107",
-                      margin: "5px",
-                      fontFamily: "fantasy",
-                      fontSize: "12px",
-                    }}
-                    className={
-                      move === this.state.stepNumber ? "bold-item" : ""
-                    }
-                    onClick={() => {
-                      if (!this.state.active) {
-                        if (desc === "Go to game start") {
-                          this.handleReset();
-                        } else {
-                          this.jumpTo(move);
-                        }
-                      } else {
-                        if (asend === "Go to game start") {
-                          this.handleReset();
-                        } else {
-                          this.jumpTo(move);
-                        }
-                      }
-                    }}
-                  >
-                    {this.state.active ? asend : desc}
-                  </Button>
-                </li>
-              );
-            })}
-          </ol>
-        </div>
+        <GameInfo history={this.state.history} stepNumber={this.state.stepNumber} active={this.state.active} handleReset={this.handleReset} jumpTo={this.jumpTo} />
+        
+      
       </div>
     );
   }

@@ -1,4 +1,7 @@
 .game {
+  display: grid;
+  grid-template-columns: 60% 45%;
+  grid-template-rows: 10% 55% 30%;
     /* display: flex;
     flex-direction: row; */
     /* padding-bottom: 40px; */
@@ -26,6 +29,8 @@
   }
 
   .game-info{
+    grid-row: span 3;
+
     /* overflow: scroll; */
     /* max-height: 15vh; */
     /* margin-left: 50px; */
@@ -64,6 +69,8 @@
   /* } */
 
   .status{
+    grid-column: 1;
+    grid-row: 3;
     font-size: 25px;
     /* display: flex; */
     /* flex-direction: none; */
@@ -73,3 +80,18 @@
     /* for mobile: font-size: 30px */
     /* for tablet: margin-bottom: 10px */
   }
+
+  ol, ul {
+    padding-left: 30px;
+    list-style-type: none;
+  
+  }
+
+  /* Media query for Mobile use this in theory? */
+
+  @media only screen and (max-width: 768px){
+    .game-info{
+      margin-bottom: 10vh;
+    }
+  }
+

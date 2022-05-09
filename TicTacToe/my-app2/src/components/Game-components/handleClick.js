@@ -3,7 +3,6 @@ import calculateWinner from "./calculateWinner";
 import {playNovice} from './RandomMove';
 
 function handleClick(i, setState, state){
-// I left of here
     //   {/* "I" stands for the location of squares and its coordinates EX: 0,1, 0,2, 03. */}
         var history = state.history.slice(0, state.stepNumber + 1);
         var current = history[history.length - 1];
@@ -49,7 +48,7 @@ function handleClick(i, setState, state){
         }
         ])
         console.log(squares2)
-    // {TODO I have to break all of this consts into smaller components. Maybe an Else statement goes here?}
+    // {TODO Maybe an Else statement goes here?}
     //if there is a computer winner, we tell it that it won. Adds the +1 to the CPU point system?
      const CPUwinner = calculateWinner(squares2);
         console.log('winner', CPUwinner)

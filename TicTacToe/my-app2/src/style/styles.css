@@ -1,5 +1,5 @@
 body {
-    background-image:url('./images/blackTickTacToe.jpg');
+    background-image:url('../images/blackTickTacToe.jpg');
     font: 14px "Century Gothic", Futura, sans-serif;
     background-position: center;
     background-size: cover;
@@ -53,14 +53,14 @@ body {
   
 .link-colors {
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   justify-content: space-evenly;
  background-color: #ffc107;
  padding: 10px;
- /* gap: 50px; */
+ gap: 50px;
  border-radius: 20px;
- /* width: 33%; */
- /* margin-top: 10px; */
+ width: 33%;
+ margin-top: 10px;
 
 /* for mobile */
  /* width: 90%;

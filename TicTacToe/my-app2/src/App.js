@@ -3,9 +3,9 @@ import {BrowserRouter} from 'react-router-dom';
 import Header from './components/container/Header';
  import RoutesB from './components/container/RoutesB';
 //  import './index.css';
-import './styles.css'
-import './game.css'
-import './board.css'
+import './style/styles.css';
+import './style/game.css';
+import './style/board.css';
 
 function App() {
   return (
