@@ -126,10 +126,12 @@
   
       .imgTom img {
         width: 260px;
+        height: 400px;
       }
   
       .imgAI img{
         width:260px;
+        height: 400px;
       }
   }
 
