@@ -163,6 +163,10 @@
     padding-top: 7vh;
   }
 
+  .game-info{
+    margin: 25px
+  }
+
 }
 
 /* laptop */
@@ -173,5 +177,9 @@ main{
 
 .game{
   margin-top: 45px;
+}
+
+.game-info{
+  margin: 25px;
 }
 }
