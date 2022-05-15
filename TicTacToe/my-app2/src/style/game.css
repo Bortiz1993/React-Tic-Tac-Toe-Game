@@ -124,6 +124,9 @@
       margin-bottom: 1vh;
       
     }
+    .title{
+      padding-top:10px;
+    }
 
     .link-colors{
       width:auto;
