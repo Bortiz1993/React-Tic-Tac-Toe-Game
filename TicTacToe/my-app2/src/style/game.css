@@ -157,7 +157,7 @@
 /* for tablet */
 @media only screen and (min-width: 769px) and (max-width: 1024px){
   .game{
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .main{
     padding-top: 7vh;
@@ -168,7 +168,7 @@
 /* laptop */
 @media only screen and (min-width: 1025px) and (max-width: 1440px){
 main{
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 .game{
