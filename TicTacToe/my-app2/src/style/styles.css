@@ -59,8 +59,8 @@ body {
  padding: 10px;
  gap: 50px;
  border-radius: 20px;
- width: 33%;
- margin-top: 10px;
+ width:auto;
+ margin: 5px;
 
 /* for mobile */
  /* width: 90%;

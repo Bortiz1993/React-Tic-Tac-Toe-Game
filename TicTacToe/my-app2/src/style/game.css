@@ -72,6 +72,7 @@
     grid-column: 1;
     grid-row: 3;
     font-size: 25px;
+    margin:5px;
     /* display: flex; */
     /* flex-direction: none; */
     /* padding-top: 15px; */
@@ -89,9 +90,81 @@
 
   /* Media query for Mobile use this in theory? */
 
-  @media only screen and (max-width: 768px){
+  @media only screen and (min-width: 320px)  and (max-width: 768px){
     .game-info{
-      margin-bottom: 10vh;
+      margin-bottom: 1vh;
+      
     }
+
+    .link-colors{
+      width:auto;
+    }
+
+    .game{
+      display: contents;
+    }
+
+    .game-board{
+      margin-top:1vh;
+    }
+
+    .status{
+      margin: 10px;
+      font-size: 15px;
+    }
+
+    /* images */
+
+    .imgTom{
+      margin-top: 90px;
+    }
+
+    .imgAI{
+      margin-top: 90px;
+    }
+
+
+    .imgTom img {
+      width: 260px;
+    }
+
+    .imgAI img{
+      width:260px;
+    }
+
+
+
+  ol{
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
   }
 
+/* for tablet */
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+  .game{
+    margin-top: 100px;
+  }
+  .main{
+    padding-top: 7vh;
+  }
+
+  .imgTom img{
+    width: 255px;
+  }
+
+  .imgAI img{
+    width: 255px;
+  }
+}
+
+/* laptop */
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+main{
+  padding-top: 15vh;
+}
+
+.game{
+  margin-top: 80px;
+}
+}
