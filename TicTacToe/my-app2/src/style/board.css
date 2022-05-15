@@ -128,10 +128,22 @@
         width: 260px;
         height: 400px;
       }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .imgTom {
+          animation: imgTom-slidein  1s linear;
+        }
+      }
   
       .imgAI img{
         width:260px;
         height: 400px;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .imgAI{
+          animation: imgAI-slidein  1s linear;
+        }
       }
   }
 
