@@ -1,9 +1,4 @@
-.game-board{
-    /* padding: 25px; */
-    /* border-right: 1px solid whitesmoke; */
-    grid-row: 2;
-    grid-column: 1;
-}
+
 
 #board{
     display: grid;
@@ -115,3 +110,41 @@
       width:100%;
     }
   }
+
+  /* mobile images query */
+  @media only screen and (min-width: 320px)  and (max-width: 768px){
+      /* images */
+
+      .imgTom{
+        margin-top: 90px;
+      }
+  
+      .imgAI{
+        margin-top: 90px;
+      }
+  
+  
+      .imgTom img {
+        width: 260px;
+      }
+  
+      .imgAI img{
+        width:260px;
+      }
+  }
+
+  /* for tablet images */
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+  .imgTom img{
+    width: 255px;
+  }
+
+  .imgAI img{
+    width: 255px;
+  }
+}
+
+/* * laptop images */ 
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+
+}
