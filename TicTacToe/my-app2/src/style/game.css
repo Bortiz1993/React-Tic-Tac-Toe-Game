@@ -168,10 +168,10 @@
 /* laptop */
 @media only screen and (min-width: 1025px) and (max-width: 1440px){
 main{
-  padding-top: 10vh;
+  padding-top: 1vh;
 }
 
 .game{
-  margin-top: 50px;
+  margin-top: 45px;
 }
 }
