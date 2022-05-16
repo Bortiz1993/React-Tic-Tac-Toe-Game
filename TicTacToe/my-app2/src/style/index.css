@@ -45,12 +45,7 @@ ol, ul {
 
 }
 
-.bold-item {
-  float: left;
-  font-weight: bold;
-  background-color:aqua;
- 
-}
+
 /* 
 .board-row{
   display: flex;
