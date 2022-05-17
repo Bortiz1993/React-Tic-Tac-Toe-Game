@@ -168,7 +168,7 @@
   .game{
     /* 10,55, 30 */
     grid-template-rows: 10% 80% 30%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 35%;
     margin-top: 15px;
   }
   .main{
@@ -188,6 +188,10 @@
     grid-template-rows: 25% 25%; */
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
+  flex-direction: row;
   }
   .status p{
     margin: 0;
