@@ -149,8 +149,14 @@
     }
 
     .status{
-      margin: 20px;
+      /* margin: 20px; */
       font-size: 15px;
+      display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
     }
 
   ol{
