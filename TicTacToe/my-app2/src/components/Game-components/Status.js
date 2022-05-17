@@ -16,8 +16,8 @@ class Status extends React.Component {
             ) : (
               //display status of the next player as long at there is no winner, status will display winner if there is a winner.
               <>
-                <p>{"X wins at 5"}</p>
-                <p> {" O wins at 3"}</p>
+                <p>{"X wins at 5 "}</p>
+                <p> {"O wins at 3 "}</p>
               </>
             )
           }
