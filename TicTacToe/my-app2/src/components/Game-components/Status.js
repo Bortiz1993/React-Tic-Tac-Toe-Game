@@ -24,8 +24,8 @@ class Status extends React.Component {
         {/* </p> */}
 
         {/* //Terminal state of the game? decides whether the game ends or not? */}
-        <p>{"Points X: " + this.props.totalWins["X"]}</p>
-        <p> {"Points O: " + this.props.totalWins["O"]}</p>
+        <p>{" Points X: " + this.props.totalWins["X "]}</p>
+        <p> {" Points O: " + this.props.totalWins["O "]}</p>
         <div>
           {this.props.winner ? (
             <Button
