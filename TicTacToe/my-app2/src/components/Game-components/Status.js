@@ -6,7 +6,7 @@ class Status extends React.Component {
   render() {
     return (
       <div className="status">
-        <p>
+        {/* <p> */}
           {
             //Depending on the condition, this if statement will display the winner.
             this.props.winner ? (
@@ -21,7 +21,7 @@ class Status extends React.Component {
               </>
             )
           }
-        </p>
+        {/* </p> */}
 
         {/* //Terminal state of the game? decides whether the game ends or not? */}
         <p>{"Points X: " + this.props.totalWins["X"]}</p>

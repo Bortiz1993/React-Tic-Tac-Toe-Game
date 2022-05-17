@@ -97,12 +97,13 @@
   /*Tablet query  */
     /* padding-top: 10vh; */
   }
-
   .status{
+   
     grid-column: 1;
     grid-row: 3;
     font-size: 20px;
-    margin:13px;
+    margin-top:13px;
+    margin-bottom:13px;
     /* display: flex; */
     /* flex-direction: none; */
     /* padding-top: 15px; */
@@ -163,15 +164,34 @@
 
 /* for tablet */
 @media only screen and (min-width: 769px) and (max-width: 1024px){
+  /* changes the size of the grid rows and columns */
   .game{
+    /* 10,55, 30 */
+    grid-template-rows: 10% 80% 30%;
+    grid-template-columns: 50% 50%;
     margin-top: 15px;
   }
   .main{
     padding-top: 7vh;
   }
 
+  /* changes the button layout */
   .game-info{
-    margin: 19px
+    margin: 0;
+  }
+
+  /* changes the point system */
+  .status{
+    /* margin: 19px */
+    /* display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25%; */
+  display: flex;
+  flex-wrap: wrap;
+  }
+  .status p{
+    margin: 0;
+    width: 40%;
   }
 
   ol{
