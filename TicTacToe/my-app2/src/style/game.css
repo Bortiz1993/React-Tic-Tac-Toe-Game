@@ -145,17 +145,17 @@
     }
 
     .game-board{
-      margin-top: 8vh;
+      margin-top: 5vh;
     }
 
     .status{
       /* margin: 20px; */
       font-size: 15px;
-      display: flex;
+      /* display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     padding: 5px;
     }
 
