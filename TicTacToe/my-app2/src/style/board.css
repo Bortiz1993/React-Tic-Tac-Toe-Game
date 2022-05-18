@@ -117,10 +117,12 @@
 
       .imgTom{
         margin-top: 110px;
+        top:40px;
       }
   
       .imgAI{
         margin-top: 110px;
+        top: 40px;
       }
   
   
@@ -137,7 +139,7 @@
   
       .imgAI img{
         width:260px;
-        height: 400px;
+        /* height: 400px; */
       }
 
       @media (prefers-reduced-motion: no-preference) {
