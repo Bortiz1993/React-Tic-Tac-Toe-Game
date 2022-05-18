@@ -56,12 +56,12 @@
   .imgTom{
     position: absolute;
     pointer-events: none;
-    margin-top: 55px;
+    margin-top: 45px;
   }
   
   .imgTom img {
     height: 350px;
-    width: 250px;
+    width: 255px;
     /* margin-left: 150px; */
   }
 
@@ -85,12 +85,12 @@
   .imgAI{
     position: absolute;
     pointer-events: none;
-    margin-top: 55px
+    margin-top: 45px
   }
   
   .imgAI img {
     height:350px;
-    width: 250px;
+    width: 255px;
     /* margin-left:150px; */
   }
 
