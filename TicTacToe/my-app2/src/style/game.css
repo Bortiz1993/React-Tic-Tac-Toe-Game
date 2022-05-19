@@ -102,7 +102,7 @@
     grid-column: 1;
     grid-row: 3;
     font-size: 20px;
-    margin-top:40px;
+    /* margin-top:40px; */
     margin-bottom:13px;
     /* display: flex; */
     /* flex-direction: none; */
@@ -130,6 +130,7 @@
   @media only screen and (min-width: 320px)  and (max-width: 768px){
     .game-info{
       margin-bottom: 1vh;
+      padding: 25px;
       
     }
     .title{
@@ -138,6 +139,7 @@
 
     .link-colors{
       width:auto;
+      margin: 25px;
     }
 
     .game{
@@ -149,14 +151,18 @@
     }
 
     .status{
-      /* margin: 20px; */
+      margin: 15px;
       font-size: 15px;
-      /* display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: center;
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+    /* justify-content: center;
     flex-wrap: wrap; */
     padding: 5px;
+    }
+
+    span{
+      margin:5px;
     }
 
   ol{
@@ -173,9 +179,10 @@
   /* changes the size of the grid rows and columns */
   .game{
     /* 10,55, 30 */
-    grid-template-rows: 10% 80% 30%;
+    grid-template-rows: 10% 85% 30%;
     grid-template-columns: 50% 35%;
     margin-top: 15px;
+    width: 65vw;
   }
   .main{
     padding-top: 7vh;
@@ -189,16 +196,24 @@
   /* changes the point system */
   .status{
     /* margin: 19px */
-    /* display: grid;
+    display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25%; */
-  display: flex;
+    grid-template-rows: 25% 25%; 
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   /* align-items: center; */
-  align-content: flex-start;
-  flex-direction: row;
+  /* align-content: flex-start;
+  flex-direction: row; */ 
   }
+
+  #win, #draw{
+    grid-row: 2;
+
+    
+  }
+
+  
   .status p{
     margin: 0;
     width: 50%;

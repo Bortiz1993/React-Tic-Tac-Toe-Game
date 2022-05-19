@@ -10,23 +10,23 @@ class Status extends React.Component {
           {
             //Depending on the condition, this if statement will display the winner.
             this.props.winner ? (
-              "Winner: " + this.props.winner.winner
+           <span id="win"> Winner: {this.props.winner.winner}</span>
             ) : this.props.stepNumber >= 9 ? (
-              "Draw"
+             <span id= "draw">Draw</span>
             ) : (
               //display status of the next player as long at there is no winner, status will display winner if there is a winner.
               <>
-                <p>{"X wins at 5 "}</p>
-                <p> { "O wins at 3"}</p>
+                <span>X wins at 5</span>
+                 <span> O wins at 3</span>
               </>
             )
           }
         {/* </p> */}
 
         {/* //Terminal state of the game? decides whether the game ends or not? */}
-        <p>{" Points X: " + this.props.totalWins["X"]}</p>
-        <p> {" Points O: " + this.props.totalWins["O"]}</p>
-        <div>
+        <span>Points X: {this.props.totalWins["X"]}</span>
+        <span> Points O:  {this.props.totalWins["O"]}</span>
+        {/* <div> */}
           {this.props.winner ? (
             <Button
               variant="contained"
@@ -41,7 +41,7 @@ class Status extends React.Component {
           ) : (
             ""
           )}
-        </div>
+        {/* </div> */}
       </div>
     );
   }
