@@ -181,7 +181,8 @@
     /* 10,55, 30 */
     grid-template-rows: 10% 85% 30%;
     grid-template-columns: 50% 35%;
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-left: 150px;
     width: 65vw;
   }
   .main{
