@@ -231,13 +231,13 @@
 }
 
 /* laptop */
-@media only screen and (min-width: 1025px) and (max-width: 1440px){
+@media only screen and (min-width: 1025px){
 main{
   padding-top: 18vh;
 }
 
 .game{
-  margin-top: 15px;
+  margin-top: 100px;
 }
 
 .game-info{
