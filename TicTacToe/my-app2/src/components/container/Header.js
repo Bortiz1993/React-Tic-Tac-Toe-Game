@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 function Header () {
     return (
         <header className="link-colors" >
-            <a href="http://localhost:3000/projects">Portfolio</a>
+            <a href="https://bortiz-portfolio.netlify.app/projects">Portfolio</a>
                 <Link to="/">AIGame</Link>
             {/* <Link to="/contact">Contact</Link> */}
         </header>
