@@ -137,7 +137,7 @@
   /* for tablet images */
 @media only screen and (min-width: 769px) and (max-width: 1024px){
   .imgTom {
-    top: 180px;
+    top: 190px;
   }
  
  
@@ -147,7 +147,7 @@
 
   .imgAI{
      
-      top: 180px;
+      top: 190px;
   }
 
   .imgAI img{
