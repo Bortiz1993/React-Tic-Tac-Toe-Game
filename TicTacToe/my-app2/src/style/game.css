@@ -43,6 +43,13 @@
     margin-top:5px;
   }
 
+  ol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
   ol, ul {
     padding-left: 10px;
     list-style-type: none;
