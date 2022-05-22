@@ -165,4 +165,8 @@ main{
   flex-direction: column;
   align-items: center;
 }
+
+#win, #draw{
+  grid-row: 2;
+}
 }
