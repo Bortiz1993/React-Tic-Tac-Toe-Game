@@ -1,27 +1,10 @@
 .game {
   display: grid;
   grid-template-columns: 60% 45%;
-  grid-template-rows: 10% 80% 30%;
-    /* display: flex;
-    flex-direction: row; */
-    /* padding-bottom: 40px; */
-    /* padding-bottom: 40px;
-    margin: auto; */
-
-/* for mobile */
-    /* flex-direction: column; */
-    /* padding-bottom: 15px; */
-    /* margin-left: 25px; */
-
-/* for tablet */
-    /* margin:auto; */
-    /* flex-direction: column; */
-    /* padding-bottom: 15px; */
+  grid-template-rows: 10% auto 200px;
   }
 
   .game-board{
-    /* padding: 25px; */
-    /* border-right: 1px solid whitesmoke; */
     grid-row: 2;
     grid-column: 1;
 }
@@ -30,50 +13,12 @@
     font-size: 20px;
     font-family: fantasy;
     margin: auto;
-    /* it can work for mobile too */
-    /* For Tablet, padding: 10px */
-    /* For laptop font-size: 30px */
   }
 
   .game-info{
     grid-row: span 3;
 
-    /* overflow: scroll; */
-    /* max-height: 15vh; */
-    /* margin-left: 50px; */
-    /* display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
-    align-content: flex-end;
-    flex-wrap: nowrap; */
-    /* margin: 0px; */
-    /* padding: 5px; */
-    /* max-width: 80vw; */
-
-/* for tablet */
-    /* margin:auto; */
-    /* padding: 5px; */
-    /* align-items: flex-end; */
-    /* justify-content: center; */
   }
-
-  /* .game-board{ */
-    /* padding: 25px; */
-    /* border-right: 1px solid whitesmoke; */
-
-/* for mobile */
-    /* border:none;
-    margin-top: 10px;
-    padding:0px;
-    margin-bottom: 0px;
-    margin-right: 15px; */
-
-/* for tablet */
-    /* border:none;
-    margin:auto;
-    padding: 5px; */
-  /* } */
 
   main{
     /* maybe fix the flex here? */
@@ -86,16 +31,7 @@
     background: linear-gradient(45deg, black, transparent);
     display: flex; 
     flex-direction: column;
-    /* justify-content: space-evenly; */
     align-items: center;
-
-   /* mobile query */
-    /* height: auto;
-    width: auto; */
-    /* padding: 0;
-    padding-top: 5vh; */
-  /*Tablet query  */
-    /* padding-top: 10vh; */
   }
   .status{
     display: grid;
@@ -105,20 +41,11 @@
     grid-row: 3;
     font-size: 20px;
     margin-top:5px;
-    /* margin-bottom:20px; */
-    /* display: flex; */
-    /* flex-direction: none; */
-    /* padding-top: 15px; */
-    /* align-items: flex-start; */
-
-    /* for mobile: font-size: 30px */
-    /* for tablet: margin-bottom: 10px */
   }
 
   ol, ul {
     padding-left: 10px;
     list-style-type: none;
-  
   }
 
   .bold-item {
@@ -158,9 +85,7 @@
       display: flex; 
       flex-direction: column;
       align-items: center;
-    /* justify-content: center;
-    flex-wrap: wrap; */
-    padding: 5px;
+      padding: 5px;
     }
 
     span{
@@ -185,7 +110,7 @@
   /* changes the size of the grid rows and columns */
   .game{
     /* 10,55, 30 */
-    grid-template-rows: 10% 85% 30%;
+    grid-template-rows: 10% auto 200px;
     grid-template-columns: 50% 35%;
     margin-top: 30px;
     margin-left: 150px;
@@ -202,22 +127,13 @@
 
   /* changes the point system */
   .status{
-    /* margin: 19px */
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25%; 
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  /* align-items: center; */
-  /* align-content: flex-start;
-  flex-direction: row; */ 
   }
 
   #win, #draw{
     grid-row: 2;
-
-    
   }
 
   
@@ -239,10 +155,6 @@
 main{
   padding-top: 10vh;
 }
-
-/* .game{
-  margin-top: 100px;
-} */
 
 .game-info{
   margin: 19px;

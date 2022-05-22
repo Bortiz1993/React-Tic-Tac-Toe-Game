@@ -7,24 +7,11 @@ body {
     position:fixed;
     height: 100%;
     width: 100%;
-    /* height: 100vh; */
-    /* margin:0; */
-    /* padding:0; */
-    /* height: auto; */
-    /* width: auto; */
-    /* margin-top: 20px; */
     color:rgb(255, 250, 250);
   }
 
   html{
     background: black;
-  }
-
-  #root {
-    /* height:100vh; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
   }
 
 .link-colors {
@@ -37,13 +24,6 @@ body {
  border-radius: 20px;
  width:auto;
  margin: 5px;
-
-/* for mobile */
- /* width: 90%;
- margin-left: 0px;
- margin-top: 10px; */
-
-/* margin auto for tablet */
 }
 
 .link-colors a{
