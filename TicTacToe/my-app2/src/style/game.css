@@ -112,7 +112,7 @@
     /* 10,55, 30 */
     grid-template-rows: 10% auto 150px;
     grid-template-columns: 50% 35%;
-    margin-top: 30px;
+    margin-top: 1px;
     margin-left: 150px;
     width: 65vw;
   }

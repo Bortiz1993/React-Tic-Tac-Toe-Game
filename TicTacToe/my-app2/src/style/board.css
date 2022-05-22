@@ -47,7 +47,7 @@
   .imgTom{
     position: absolute;
     pointer-events: none;
-    top: 180px;
+    top: 190px;
   }
   
   .imgTom img {
@@ -75,7 +75,7 @@
   .imgAI{
     position: absolute;
     pointer-events: none;
-    top: 180px
+    top: 190px
   }
   
   .imgAI img {
@@ -137,7 +137,7 @@
   /* for tablet images */
 @media only screen and (min-width: 769px) and (max-width: 1024px){
   .imgTom {
-    top: 173px;
+    top: 180px;
   }
  
  
@@ -147,7 +147,7 @@
 
   .imgAI{
      
-      top: 173px;
+      top: 180px;
   }
 
   .imgAI img{
@@ -158,10 +158,10 @@
 /* * laptop images */ 
 @media only screen and (min-width: 1025px){
   .imgTom {
-    top: 180px;
+    top: 190px;
   }
 
   .imgAI {
-    top: 180px;
+    top: 190px;
   }
 }
