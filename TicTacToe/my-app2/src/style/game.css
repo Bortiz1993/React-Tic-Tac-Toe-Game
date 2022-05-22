@@ -1,7 +1,7 @@
 .game {
   display: grid;
   grid-template-columns: 60% 45%;
-  grid-template-rows: 10% auto 200px;
+  grid-template-rows: 10% auto 150px;
   }
 
   .game-board{
@@ -110,7 +110,7 @@
   /* changes the size of the grid rows and columns */
   .game{
     /* 10,55, 30 */
-    grid-template-rows: 10% auto 200px;
+    grid-template-rows: 10% auto 150px;
     grid-template-columns: 50% 35%;
     margin-top: 30px;
     margin-left: 150px;
