@@ -1,9 +1,4 @@
-# TestGame1
-## TestGame1
-### TestGame1
-#### TestGame1
-##### TestGame1
-######   TestGame1
+# React Tic-Tac-Toe game.
 
 
 A tic tac toe game
