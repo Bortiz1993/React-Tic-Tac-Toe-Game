@@ -7,4 +7,7 @@ A tic tac toe game
 This is the image of the game.
 (![2022-06-04](https://user-images.githubusercontent.com/77209112/171989373-92469f35-fce9-4886-82c4-51c7b3a5d2f5.png)
 
+# React.
+I created this application with React.
+
 
