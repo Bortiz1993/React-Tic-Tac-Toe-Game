@@ -1,5 +1,5 @@
 # React Tic-Tac-Toe game.
-![visitors](https://visitor-badge.glitch.me/badge?page_id=page.id)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=Bortiz1993.id)
 
 A tic tac toe game
 [![Netlify Status](https://api.netlify.com/api/v1/badges/974dbc81-0352-4a1e-9884-7835fcf83157/deploy-status)](https://app.netlify.com/sites/strong-nasturtium-0246a0/deploys)
