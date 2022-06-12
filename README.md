@@ -10,7 +10,8 @@ A tic tac toe game
 This is the image of the game.
 ![2022-06-04](https://user-images.githubusercontent.com/77209112/171989373-92469f35-fce9-4886-82c4-51c7b3a5d2f5.png)
 Mobile Version.
-![Screenshot_20220612-155134](https://user-images.githubusercontent.com/77209112/173253833-9211efa2-171b-4987-a5ad-8af8ba1cb589.png)
+![MobileVersion](https://user-images.githubusercontent.com/77209112/173254538-5db59590-a77c-4d24-ba5d-aa9946ff28bd.png)
+
 
 # React.
 I created this application with React.
