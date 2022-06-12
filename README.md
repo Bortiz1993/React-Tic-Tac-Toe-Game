@@ -1,13 +1,16 @@
 # React Tic-Tac-Toe game.
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=Bortiz1993.id)
 
+# # Description
+Welcome fellow Developers, this is where you will find information about this Tic-Tac-Toe game. I apreciate any feedback and if anyone wants to, they can contribute as well. My goal is to make this game more fun, unpredictable and a bit more challenging.
+
 A tic tac toe game
 [![Netlify Status](https://api.netlify.com/api/v1/badges/974dbc81-0352-4a1e-9884-7835fcf83157/deploy-status)](https://app.netlify.com/sites/strong-nasturtium-0246a0/deploys)
 
 This is the image of the game.
 ![2022-06-04](https://user-images.githubusercontent.com/77209112/171989373-92469f35-fce9-4886-82c4-51c7b3a5d2f5.png)
 Mobile Version.
-![2022-06-12](https://photos.app.goo.gl/WgjAWZ3wEUe557vy9)
+![Screenshot_20220612-155134](https://user-images.githubusercontent.com/77209112/173253833-9211efa2-171b-4987-a5ad-8af8ba1cb589.png)
 
 # React.
 I created this application with React.
