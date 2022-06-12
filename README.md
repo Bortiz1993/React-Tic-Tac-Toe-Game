@@ -1,7 +1,7 @@
 # React Tic-Tac-Toe game.
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=Bortiz1993.id)
 
-# # Description
+# #Description
 Welcome fellow Developers, this is where you will find information about this Tic-Tac-Toe game. I apreciate any feedback and if anyone wants to, they can contribute as well. My goal is to make this game more fun, unpredictable and a bit more challenging.
 
 A tic tac toe game
