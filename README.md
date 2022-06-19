@@ -8,6 +8,12 @@ Welcome fellow Developers, this is where you will find information about this Ti
 A tic tac toe game
 [![Netlify Status](https://api.netlify.com/api/v1/badges/974dbc81-0352-4a1e-9884-7835fcf83157/deploy-status)](https://app.netlify.com/sites/strong-nasturtium-0246a0/deploys)
 
+### Links
+[Repo](https://github.com/Bortiz1993/TestGame1)
+[Live](https://ai-tic-tac-toe-game.netlify.app/)
+[Bugs](https://github.com/Bortiz1993/TestGame1/issues)
+
+
 ### Screenshots
 ![Tic-Tac-Toe](https://user-images.githubusercontent.com/77209112/173255231-adb3263a-60ba-490a-8fbd-4972ce48d9e5.png)
 
