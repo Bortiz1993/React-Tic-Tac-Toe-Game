@@ -20,7 +20,7 @@ A tic tac toe game
 ![Tic-Tac-Toe](https://user-images.githubusercontent.com/77209112/173255231-adb3263a-60ba-490a-8fbd-4972ce48d9e5.png)
 
 ##### Tablet Version.
-(![TabletVersion](https://user-images.githubusercontent.com/77209112/174504117-f7f59ce6-4114-4f98-a86f-7c23dbffcdf7.png)
+![TabletVersion](https://user-images.githubusercontent.com/77209112/174504117-f7f59ce6-4114-4f98-a86f-7c23dbffcdf7.png)
 
 ##### Mobile Version.
 ![MobileVersion](https://user-images.githubusercontent.com/77209112/173254852-7db795e0-560f-4bf3-aca6-32d421e01c6c.png)
