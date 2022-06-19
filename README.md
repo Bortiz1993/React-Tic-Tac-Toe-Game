@@ -24,7 +24,8 @@ A tic tac toe game
 ![MobileVersion](https://user-images.githubusercontent.com/77209112/173254852-7db795e0-560f-4bf3-aca6-32d421e01c6c.png)
 
 ##### Tablet Version.
-![TabletVersion](https://user-images.githubusercontent.com/77209112/174503719-28f978fd-db95-48ed-ba06-99d396edde11.png)
+(![TabletVersion](https://user-images.githubusercontent.com/77209112/174504117-f7f59ce6-4114-4f98-a86f-7c23dbffcdf7.png)
+
 
 
 
