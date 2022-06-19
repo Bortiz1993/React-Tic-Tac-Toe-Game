@@ -13,7 +13,7 @@ A tic tac toe game
 
 [Live](https://ai-tic-tac-toe-game.netlify.app/)
 
-[Bugs](https://github.com/Bortiz1993/TestGame1/issues)
+[Report Bugs](https://github.com/Bortiz1993/TestGame1/issues)
 
 
 ### Screenshots
