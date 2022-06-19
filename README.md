@@ -23,6 +23,10 @@ A tic tac toe game
 ##### Mobile Version.
 ![MobileVersion](https://user-images.githubusercontent.com/77209112/173254852-7db795e0-560f-4bf3-aca6-32d421e01c6c.png)
 
+##### Tablet Version.
+![TabletVersion](https://user-images.githubusercontent.com/77209112/174503607-a59563f5-5c04-4dcb-853b-afb5b0a25a82.png)
+
+
 
 
 # React.
