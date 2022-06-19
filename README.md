@@ -10,7 +10,9 @@ A tic tac toe game
 
 ### Links
 [Repo](https://github.com/Bortiz1993/TestGame1)
+
 [Live](https://ai-tic-tac-toe-game.netlify.app/)
+
 [Bugs](https://github.com/Bortiz1993/TestGame1/issues)
 
 
