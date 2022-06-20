@@ -68,7 +68,6 @@ I build the skeleton with the tutorial.
 
 [W3Schools](https://www.w3schools.com/react/default.asp)
 
-[Stack Overflow]()
 
 I did not use any of the code in this tutorial but it gave me some inspiration.
 
@@ -85,6 +84,33 @@ We read this article to learn more about React AI.
 We ran into a package.json problem where I needed to remove "not dead" from the dependencies.
 
 [Solution for package.json](https://stackoverflow.com/questions/52939103/browserslisterror-unknown-browser-query-dead-in-react-express-app)
+
+I created this README.md with the help of this article.
+
+[REAME.md article](https://dev.to/rohit19060/how-to-write-stunning-github-readme-md-template-provided-5b09)
+
+## Special Thanks to
+
+- GMartinez: Helped me with the whole app and specially the AI.
+- NJackson: Helped with some of the app.
+- TropicalBro: Helped a little with the app.
+- CoolBro: helped a little with the app.
+
+## Author
+
+**Brijido Ortiz Zuniga**
+
+**Alias: Shooting Riser, X, Yusei Fudo, Stardust Warrior, Cosmic Flare**
+
+- [Profile](https://github.com/Bortiz1993)
+- [Email](Bortiz4ever@gmail.com)
+- [Portfolio Website](https://bortiz-portfolio.netlify.app/)
+
+## Support
+
+Contributions, issues, and new ideas are welcome!
+
+
 
 
 
