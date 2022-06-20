@@ -63,7 +63,25 @@ To run the build use:
 
 ## Resources/Help from other Developers
 I build the skeleton with the tutorial.
+
 [React Tutorial](https://reactjs.org/tutorial/tutorial.html)
+
+[W3Schools](https://www.w3schools.com/react/default.asp)
+
+[Stack Overflow]()
+
+I did not use any of the code in this tutorial but it gave me some inspiration.
+[React Tutorial](https://www.linkedin.com/pulse/how-build-simple-tic-tac-toe-game-react-alex-devero/)
+
+We used some of the code in this AI React Tic-Tac-Toe Tutorial.
+[React AI Tic-Tac-Toe](https://betterprogramming.pub/how-i-created-my-first-ai-program-using-react-js-95fe54d994d6)
+
+We read this article to learn more about React AI.
+[React AI Article](https://www.javatpoint.com/mini-max-algorithm-in-ai)
+
+We ran into a package.json problem where I needed to remove "not dead" from the dependencies.
+[Solution for package.json](https://stackoverflow.com/questions/52939103/browserslisterror-unknown-browser-query-dead-in-react-express-app)
+
 
 
 
