@@ -59,6 +59,11 @@ To run the build use:
 - [ ] Make AI smarter
 - [ ] More Rewards for Winning
 - [ ] Multiplayer Mode?
+- [ ] Like and Dislike Button
+
+## Resources/Help from other Developers
+I build the skeleton with the tutorial.
+[React Tutorial](https://reactjs.org/tutorial/tutorial.html)
 
 
 
