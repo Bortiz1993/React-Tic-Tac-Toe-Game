@@ -25,15 +25,41 @@ A tic tac toe game
 ##### Mobile Version.
 ![MobileVersion](https://user-images.githubusercontent.com/77209112/173254852-7db795e0-560f-4bf3-aca6-32d421e01c6c.png)
 
+## Avaliable Commands
+
+This app was built using:
+
+### `"npx create-react-app"`,
+
+In the project directory, you can run:
+
+To start the app use:
+
+### `npm start" : "react-scripts start"`,
+
+To run the build use:
+
+### `"npm run build"`
+
+## Build With
+
+- React Version "^17.0.2"
+- JavaScript
+- Node
+- NPM
+- HTML
+- CSS
+- React-Router-DOM
+- Material UI for styling
+- FontAwesome for styling
+
+## Future Updates
+
+- [ ] Difficulty Spike
+- [ ] Make AI smarter
+- [ ] More Rewards for Winning
+- [ ] Multiplayer Mode?
 
 
-
-
-
-
-
-
-# React.
-I created this application with React.
 
 
